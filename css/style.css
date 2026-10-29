@@ -1,0 +1,7483 @@
+
+/* =================================
+   1. WARNA DAN PENGATURAN DASAR
+================================= */
+
+:root {
+    --pink: #f4a6bf;
+    --pink-soft: #ffe5ed;
+    --pink-light: #fff5f7;
+    --pink-dark: #bd5678;
+    --cream: #fffaf5;
+    --brown: #714553;
+    --lavender: #e9dff7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Trebuchet MS", sans-serif;
+    background: var(--pink-light);
+    color: var(--brown);
+    line-height: 1.7;
+}
+
+/* =================================
+   2. NAVBAR / MENU
+================================= */
+
+header {
+    padding: 20px 7%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 25px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid white;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px #e9b6c633;
+}
+
+.logo {
+    color: var(--pink-dark);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--brown);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--pink-dark);
+}
+
+/* =================================
+   3. HOME / HERO SECTION
+================================= */
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 60px 10%;
+    margin: 10px 7%;
+    border-radius: 35px;
+    background: linear-gradient(
+        135deg,
+        #ffe8ef,
+        #fff8f1,
+        #f4eaff
+    );
+    border: 2px solid white;
+    box-shadow: 0 10px 35px #e9b6c633;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.greeting {
+    display: inline-block;
+    padding: 7px 16px;
+    margin-bottom: 15px;
+    background: white;
+    border-radius: 30px;
+    color: var(--pink-dark);
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: var(--pink-dark);
+}
+
+.hero h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.description {
+    max-width: 440px;
+    margin-bottom: 25px;
+}
+
+/* Tombol pink */
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background: var(--pink);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 12px #e9a3bb55;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: var(--pink-dark);
+    transform: translateY(-3px);
+}
+
+/* Area maskot jerapah */
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 4 / 5;
+    object-fit: contain;
+    padding: 15px;
+    background: #ffffff80;
+    border: 3px solid white;
+    border-radius: 48% 48% 30px 30px;
+    box-shadow: 0 12px 25px #d58ba933;
+}
+
+/* =================================
+   4. ABOUT SECTION
+================================= */
+
+.about,
+.projects,
+.contact {
+    margin: 35px 7%;
+    padding: 55px 8%;
+    text-align: center;
+    border-radius: 30px;
+    background: white;
+    border: 2px solid #ffe0e9;
+    box-shadow: 0 8px 25px #e9b6c622;
+}
+
+.about h2,
+.projects h2,
+.contact h2 {
+    font-size: 2rem;
+    color: var(--pink-dark);
+    margin-bottom: 20px;
+}
+
+.about img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--pink-soft);
+}
+
+.about p {
+    max-width: 650px;
+    margin: auto;
+}
+
+/* =================================
+   5. PROJECT CARDS
+================================= */
+
+.projects {
+    background: #fff5f8;
+}
+
+.project-card {
+    display: inline-block;
+    width: min(100%, 260px);
+    min-height: 150px;
+    vertical-align: top;
+    margin: 10px;
+    padding: 25px;
+    background: white;
+    border: 2px solid var(--pink-soft);
+    border-radius: 22px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 20px #e9b6c644;
+}
+
+.project-card h3 {
+    color: var(--pink-dark);
+    margin-bottom: 10px;
+}
+
+/* =================================
+   6. CONTACT SECTION
+================================= */
+
+.contact a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 22px;
+    border-radius: 25px;
+    background: var(--pink-soft);
+    color: var(--pink-dark);
+    text-decoration: none;
+}
+
+/* =================================
+   7. FOOTER
+================================= */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    color: var(--pink-dark);
+}
+
+/* =================================
+   8. RESPONSIVE UNTUK HP
+================================= */
+
+@media (max-width: 700px) {
+    header {
+        padding: 15px 4%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 7%;
+        margin: 10px 4%;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image img {
+        max-width: 270px;
+    }
+
+    .about,
+    .projects,
+    .contact {
+        margin: 25px 4%;
+        padding: 35px 5%;
+    }
+
+    .project-card {
+        margin: 8px 0;
+    }
+}
+.giraffe-emoji {
+    font-size: clamp(9rem, 25vw, 17rem);
+    filter: drop-shadow(0 10px 8px #d58ba944);
+}
+
+/* Dekorasi coquette */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: relative;
+    isolation: isolate;
+}
+
+.hero-image img {
+    position: relative;
+    z-index: 1;
+    animation: giraffe-float 3s ease-in-out infinite;
+}
+
+.floating-heart {
+    position: absolute;
+    z-index: 2;
+    color: #e989a8;
+    font-size: 3rem;
+    pointer-events: none;
+    animation: heart-float 2.5s ease-in-out infinite;
+}
+
+.heart-one {
+    top: 15%;
+    left: 5%;
+}
+
+.heart-two {
+    bottom: 15%;
+    right: 5%;
+    animation-delay: 0.7s;
+}
+
+@keyframes giraffe-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes heart-float {
+    0%, 100% {
+        transform: translateY(0) rotate(-8deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(8deg);
+    }
+}
+
+/* Efek pilihan saat kartu proyek disentuh */
+
+.project-card {
+    cursor: pointer;
+}
+
+.project-card:hover {
+    border-color: #f4a6bf;
+    transform: translateY(-7px) rotate(-1deg);
+}
+
+/* Hormati pengaturan pengurangan animasi */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ==================================
+   DARK MODE — PINK NIGHT
+================================== */
+
+body.dark-mode {
+    background: #241b29;
+    color: #ffe6ef;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .about,
+body.dark-mode .contact {
+    background: #38283a;
+    border-color: #63415b;
+    color: #ffe6ef;
+}
+
+body.dark-mode .hero {
+    background: linear-gradient(
+        135deg,
+        #42283f,
+        #30253d,
+        #4b3048
+    );
+    border-color: #63415b;
+}
+
+body.dark-mode .projects {
+    background: #302338;
+    border-color: #63415b;
+}
+
+body.dark-mode .project-card {
+    background: #493349;
+    border-color: #76516d;
+    color: #ffe6ef;
+}
+
+body.dark-mode .nav-links a {
+    color: #ffe6ef;
+}
+
+body.dark-mode .greeting {
+    background: #493349;
+    color: #ffc1d6;
+}
+
+body.dark-mode footer {
+    color: #ffc1d6;
+}
+
+#theme-toggle {
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    background: #ffe5ed;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+body {
+    font-family: "Trebuchet MS", sans-serif;
+    background: var(--pink-light);
+    color: var(--brown);
+    line-height: 1.7;
+}
+.giraffe-placeholder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 4 / 5;
+    background: #ffe5ed;
+    border: 3px solid white;
+    border-radius: 48% 48% 30px 30px;
+    font-size: clamp(9rem, 20vw, 15rem);
+    box-shadow: 0 12px 25px #d58ba933;
+}
+
+.giraffe-placeholder span {
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    color: #e989a8;
+    font-size: 3rem;
+}
+
+/* =================================
+   SHERA'S COQUETTE NAVBAR 🎀
+================================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 25px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 2px solid #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 8px 25px rgba(220, 143, 171, 0.13);
+}
+
+/* Logo berada di sebelah kiri */
+
+.navbar .logo {
+    order: 1;
+    margin-right: auto;
+    white-space: nowrap;
+}
+
+/* Menu berada di sebelah kanan */
+
+.navbar .nav-links {
+    order: 2;
+    margin-left: auto;
+    gap: 22px;
+}
+
+/* Tombol tema berada di ujung kanan */
+
+.navbar #theme-toggle {
+    order: 3;
+    flex-shrink: 0;
+    border: 1px solid #ffd5e2;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    background: #ffe5ed;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.navbar #theme-toggle:hover {
+    transform: rotate(-12deg) scale(1.08);
+}
+
+/* Navbar untuk layar HP */
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .navbar .logo {
+        margin-right: 0;
+    }
+
+    .navbar .nav-links {
+        margin-left: 0;
+        gap: 12px;
+        justify-content: center;
+    }
+}
+
+/* =================================
+   PINK COQUETTE HERO ✧
+================================= */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(255, 205, 222, 0.65),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #ffe6ee 0%,
+            #fffaf5 55%,
+            #f6eaff 100%
+        );
+    border: 2px solid #ffffff;
+    box-shadow: 0 15px 40px rgba(222, 151, 177, 0.14);
+}
+
+/* Pita dekorasi di sudut */
+
+.hero::before {
+    content: "🎀";
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2.4rem;
+    transform: rotate(12deg);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Bintang dekorasi */
+
+.hero::after {
+    content: "✧  ˚  ♡";
+    position: absolute;
+    bottom: 20px;
+    left: 35px;
+    color: #df83a5;
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Tulisan sapaan */
+
+.greeting {
+    border: 1px solid #ffe0e9;
+    box-shadow: 0 5px 15px rgba(222, 151, 177, 0.08);
+}
+
+/* Judul utama */
+
+.hero h1 {
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: #c6537b;
+    text-shadow: 2px 3px 0 #fbd2e0;
+}
+
+/* Tombol utama */
+
+.button {
+    border: 2px solid #ffffff;
+    background: linear-gradient(135deg, #f4a6bf, #df7fa2);
+    box-shadow: 0 7px 18px rgba(214, 115, 153, 0.23);
+}
+
+.button:hover {
+    box-shadow: 0 10px 22px rgba(214, 115, 153, 0.3);
+}
+/* Menjaga dekorasi di belakang konten */
+.hero::before,
+.hero::after {
+    z-index: 0;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* =================================
+   ABOUT ME — COQUETTE STYLE 🎀
+================================= */
+
+.about {
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, #fffafd, #fff0f5);
+    padding: 65px 8%;
+}
+
+.section-label {
+    display: inline-block;
+    padding: 6px 16px;
+    margin-bottom: 10px;
+    color: #c6537b;
+    background: #ffe5ed;
+    border-radius: 30px;
+    font-size: 0.9rem;
+}
+
+.about h2 {
+    margin-bottom: 35px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #c6537b;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    text-align: left;
+}
+
+.about-photo {
+    position: relative;
+    flex: 0 1 280px;
+    min-width: 0;
+}
+
+.about-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border: 6px solid white;
+    border-radius: 45% 45% 25px 25px;
+    background: #ffe5ed;
+    box-shadow: 0 12px 30px #df91b533;
+}
+
+.photo-decoration {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    color: #e989a8;
+    font-size: 3rem;
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 7px 17px;
+    background: white;
+    border-radius: 20px;
+    color: #bd5678;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px #bd567822;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 550px;
+}
+
+.about-text h3,
+.skills h3 {
+    margin-bottom: 15px;
+    color: #bd5678;
+    font-size: 1.5rem;
+}
+
+.about-text > p {
+    margin-bottom: 15px;
+}
+
+.about-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.fact-card {
+    flex: 1 1 125px;
+    padding: 15px 10px;
+    text-align: center;
+    background: white;
+    border: 1px solid #ffe0e9;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px #df91b51a;
+}
+
+.fact-card span {
+    font-size: 1.7rem;
+}
+
+.fact-card p {
+    margin-top: 5px;
+    font-size: 0.85rem;
+}
+
+.skills {
+    margin-top: 45px;
+    padding-top: 30px;
+    border-top: 2px dashed #f4c5d5;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.skill-tag {
+    padding: 10px 18px;
+    color: #a94d70;
+    background: white;
+    border: 1px solid #f7cbd9;
+    border-radius: 25px;
+    transition: 0.25s ease;
+}
+
+.skill-tag:hover {
+    transform: translateY(-4px);
+    background: #ffe5ed;
+    box-shadow: 0 5px 15px #df91b533;
+}
+
+/* About Me untuk layar HP */
+
+@media (max-width: 700px) {
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .about-photo {
+        width: 75%;
+        max-width: 260px;
+        flex-basis: auto;
+    }
+
+    .about-facts {
+        justify-content: center;
+    }
+
+    .skills {
+        margin-top: 30px;
+    }
+}
+
+/* FIX ABOUT ME — SHERA 🎀 */
+
+section.about {
+    display: block;
+    margin: 40px 7%;
+    padding: 55px 7%;
+    text-align: center;
+    background: linear-gradient(135deg, #fffafd, #fff0f5);
+    border: 2px solid #ffe0e9;
+    border-radius: 32px;
+    box-shadow: 0 10px 30px rgba(222, 151, 177, 0.12);
+}
+
+.about .section-label {
+    display: inline-block;
+    padding: 7px 16px;
+    background: #ffe5ed;
+    border-radius: 25px;
+    color: #bd5678;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: #c6537b;
+    margin: 15px 0 30px;
+}
+
+.about .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.about .about-photo {
+    position: relative;
+    flex: 0 0 250px;
+}
+
+.about .about-photo img {
+    display: block;
+    width: 100%;
+    height: 310px;
+    margin: 0;
+    object-fit: cover;
+    border: 5px solid white;
+    border-radius: 45% 45% 25px 25px;
+    background: #ffe5ed;
+    box-shadow: 0 8px 25px #df91b533;
+}
+
+.about .about-text {
+    flex: 1;
+    max-width: 550px;
+}
+
+.about .about-text h3 {
+    color: #bd5678;
+    font-size: 1.5rem;
+}
+
+.about .about-text p {
+    max-width: none;
+    margin: 12px 0;
+    line-height: 1.8;
+}
+
+.about .photo-decoration {
+    position: absolute;
+    top: -18px;
+    right: -12px;
+    color: #e989a8;
+    font-size: 2.8rem;
+}
+
+.about .photo-caption {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 14px;
+    white-space: nowrap;
+    background: white;
+    color: #bd5678;
+    border-radius: 20px;
+}
+
+.about .about-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.about .fact-card {
+    flex: 1 1 120px;
+    padding: 12px;
+    text-align: center;
+    background: white;
+    border: 1px solid #f7cbd9;
+    border-radius: 18px;
+}
+
+.about .skills {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 2px dashed #f4c5d5;
+}
+
+.about .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.about .skill-tag {
+    padding: 10px 17px;
+    background: white;
+    border: 1px solid #f7cbd9;
+    border-radius: 25px;
+    color: #a94d70;
+}
+
+@media (max-width: 700px) {
+    section.about {
+        margin: 25px 4%;
+        padding: 35px 6%;
+    }
+
+    .about .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .about-photo {
+        width: 75%;
+        max-width: 250px;
+        flex-basis: auto;
+    }
+
+    .about .about-text {
+        width: 100%;
+    }
+}
+
+/* =================================
+   MY PROJECTS — PINK COQUETTE 🎀
+================================= */
+
+.projects {
+    margin: 40px 7%;
+    padding: 60px 6%;
+    text-align: center;
+    background: linear-gradient(145deg, #fffafd, #fff0f5);
+    border: 2px solid #ffe0e9;
+    border-radius: 32px;
+    box-shadow: 0 10px 30px rgba(222, 151, 177, 0.12);
+}
+
+.projects h2 {
+    margin: 15px 0;
+    color: #c6537b;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.projects-intro {
+    max-width: 550px;
+    margin: 0 auto 35px;
+    line-height: 1.8;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 280px));
+    justify-content: center;
+    justify-items: center;
+    gap: 25px;
+    width: 100%;
+    margin: 35px auto 0;
+    text-align: left;
+}
+
+.project-card {
+    width: 100%;
+    max-width: 280px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #f7d4e0;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(211, 135, 164, 0.10);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 28px rgba(211, 135, 164, 0.20);
+}
+
+.project-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 170px;
+    overflow: hidden;
+}
+
+.project-visual > span:first-child {
+    font-size: 5rem;
+    transition: transform 0.25s ease;
+}
+
+.project-card:hover .project-visual > span:first-child {
+    transform: scale(1.12) rotate(-4deg);
+}
+
+.visual-pink {
+    background: #ffe2ec;
+}
+
+.visual-cream {
+    background: #fff0d9;
+}
+
+.visual-lilac {
+    background: #f0e5ff;
+}
+
+.project-visual .visual-decoration {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    color: #d9789b;
+    font-size: 2rem;
+}
+
+.project-info {
+    padding: 22px;
+    text-align: center;
+}
+
+.project-number {
+    color: #d9789b;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.project-info h3 {
+    margin: 8px 0;
+    color: #754657;
+    font-size: 1.25rem;
+}
+
+.project-info > p:not(.project-number) {
+    font-size: 0.93rem;
+    line-height: 1.7;
+}
+   
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 16px auto;
+    width: 100%;
+}
+
+.project-tags span {
+    padding: 5px 10px;
+    background: #fff0f5;
+    border: 1px solid #f7d4e0;
+    border-radius: 20px;
+    color: #a94d70;
+    font-size: 0.78rem;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 5px;
+    color: #c6537b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    color: #963b60;
+    text-decoration: underline;
+}
+
+.projects-note {
+    margin-top: 35px;
+    color: #bd5678;
+    font-style: italic;
+}
+
+/* Tampilan tablet dan HP */
+
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .projects {
+        margin: 25px 4%;
+        padding: 35px 5%;
+    }
+
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 280px));
+    }
+}
+
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: minmax(0, 320px);
+    }
+}
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =================================
+   CONTACT SECTION — COQUETTE 💌
+================================= */
+
+section.contact {
+    margin: 40px 7%;
+    padding: 60px 7%;
+    text-align: center;
+    background: linear-gradient(145deg, #fff0f5, #fffafd, #fce9f5);
+    border: 2px solid #ffe0e9;
+    border-radius: 32px;
+    box-shadow: 0 10px 30px rgba(222, 151, 177, 0.12);
+}
+
+.contact h2 {
+    margin: 15px 0;
+    color: #c6537b;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.contact-intro {
+    max-width: 570px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+.contact-card {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 2px solid white;
+    border-radius: 28px;
+    box-shadow: 0 8px 25px rgba(211, 135, 164, 0.12);
+}
+
+.contact-decoration {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-card h3 {
+    color: #bd5678;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.contact-card > p {
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 14px 28px;
+    color: white;
+    background: linear-gradient(135deg, #ee9cba, #d96f98);
+    border: 2px solid white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 6px 16px rgba(217, 111, 152, 0.25);
+    transition: transform 0.2s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-4px);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.social-links a {
+    padding: 10px 16px;
+    color: #a94d70;
+    background: #fff0f5;
+    border: 1px solid #f7cbd9;
+    border-radius: 22px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.social-links a:hover {
+    background: #ffe0eb;
+}
+
+.contact-closing {
+    margin-top: 30px;
+    color: #bd5678;
+    font-style: italic;
+}
+
+.footer {
+    padding: 25px 15px;
+    text-align: center;
+    color: #89566a;
+    background: #ffeaf2;
+    border-top: 2px dashed #f0bfd1;
+}
+
+.footer p {
+    margin: 6px 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    section.contact {
+        margin: 25px 4%;
+        padding: 35px 5%;
+    }
+
+    .contact-card {
+        padding: 25px 18px;
+    }
+
+    .social-links {
+        gap: 8px;
+    }
+}
+
+/* INTERACTIVE BUTTONS 🎀 */
+
+.theme-toggle,
+#love-button {
+    padding: 11px 18px;
+    border: 1px solid #f3bfd1;
+    border-radius: 25px;
+    background: #fff0f5;
+    color: #a94d70;
+    font: inherit;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.theme-toggle:hover,
+#love-button:hover {
+    transform: translateY(-3px);
+    background: #ffe0eb;
+}
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 48px;
+    height: 48px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: #e989ae;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #d9789b44;
+    z-index: 1000;
+}
+
+#back-to-top.visible {
+    display: block;
+}
+
+
+/* 🌙 SHERA'S COQUETTE NIGHT MODE */
+
+body.dark-mode {
+    background-color: #211b2b;
+    color: #fce8f1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode nav,
+body.dark-mode header {
+    background-color: #30253a;
+    color: #ffe5f0;
+    border-color: #5a405e;
+}
+
+body.dark-mode nav a,
+body.dark-mode header a {
+    color: #ffe5f0;
+}
+
+body.dark-mode section,
+body.dark-mode .hero,
+body.dark-mode .home,
+body.dark-mode .about,
+body.dark-mode .projects,
+body.dark-mode .contact {
+    background-color: #30253a;
+    color: #fce8f1;
+    border-color: #5a405e;
+}
+
+body.dark-mode .project-card,
+body.dark-mode .contact-card,
+body.dark-mode .fact-card {
+    background-color: #403047;
+    color: #fce8f1;
+    border-color: #72536d;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode li {
+    color: #fce8f1;
+}
+
+body.dark-mode .project-tags span {
+    background-color: #52384e;
+    color: #ffe5f0;
+    border-color: #815873;
+}
+
+body.dark-mode .footer {
+    background-color: #30253a;
+    color: #ffe5f0;
+    border-color: #72536d;
+}
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: auto;
+    max-width: 100%;
+    white-space: nowrap;
+    padding: 10px 16px;
+    border-radius: 30px;
+    flex-shrink: 0;
+}
+body.dark-mode {
+    background-color: #211b2b !important;
+    color: #fce8f1 !important;
+}
+
+body.dark-mode section,
+body.dark-mode nav {
+    background-color: #30253a !important;
+    color: #fce8f1 !important;
+}
+
+/* 🌙 TEST NIGHT MODE */
+
+body.dark-mode {
+    background-color: #211b2b !important;
+    color: #fce8f1 !important;
+}
+
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode section,
+body.dark-mode footer {
+    background-color: #30253a !important;
+    color: #fce8f1 !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode a {
+    color: #fce8f1 !important;
+}
+
+/* 🌙 SHERA'S NIGHT MODE */
+
+body.dark-mode {
+    background: #211b2b !important;
+    color: #fce8f1 !important;
+}
+
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode section,
+body.dark-mode footer {
+    background-color: #30253a !important;
+    color: #fce8f1 !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode a,
+body.dark-mode li {
+    color: #fce8f1 !important;
+}
+
+body.dark-mode .project-card,
+body.dark-mode .contact-card,
+body.dark-mode .fact-card {
+    background-color: #403047 !important;
+    color: #fce8f1 !important;
+    border-color: #72536d !important;
+}
+
+/* 🌙 SHERA'S DREAMY NIGHT MODE */
+
+body,
+header,
+nav,
+section,
+footer,
+.project-card,
+.contact-card,
+.fact-card {
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* 💜 Kartu saat Night Mode aktif */
+body.dark-mode .project-card,
+body.dark-mode .contact-card,
+body.dark-mode .fact-card {
+    background-color: #403047 !important;
+    color: #fce8f1 !important;
+    border-color: #72536d !important;
+    box-shadow: 0 8px 24px rgba(10, 5, 20, 0.2);
+}
+
+/* 🎀 Judul dan teks */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #ffd5e5 !important;
+}
+
+body.dark-mode p,
+body.dark-mode li {
+    color: #fce8f1 !important;
+}
+
+/* ✨ Link navigasi */
+body.dark-mode nav a {
+    color: #ffe5f0 !important;
+}
+
+body.dark-mode nav a:hover {
+    color: #ff9fc8 !important;
+}
+
+/* 🌷 Tombol Night Mode */
+.theme-toggle {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 16px rgba(230, 120, 170, 0.25);
+}
+
+/* 🎀 Projects title in Night Mode */
+body.dark-mode .projects h2,
+body.dark-mode .projects h3,
+body.dark-mode .projects .section-title {
+    color: #ffd1e4 !important;
+}
+
+/* 🎀 Projects label - Night Mode */
+body.dark-mode .projects .section-label {
+    color: #ffb8d5 !important;
+}
+
+/* 🎀 Projects label - dreamy night style */
+body.dark-mode .projects .section-label {
+    background-color: #49334f !important;
+    color: #ffb8d9 !important;
+    border: 1px solid #79546f;
+    box-shadow: 0 4px 15px rgba(255, 184, 217, 0.08);
+}
+
+/* 💗 Projects heading and description */
+body.dark-mode .projects h2 {
+    color: #ffd1e5 !important;
+}
+
+body.dark-mode .projects .projects-intro {
+    color: #fce8f1 !important;
+}
+
+/* 🎀 About label - dreamy night style */
+body.dark-mode .about .section-label {
+    background-color: #49334f !important;
+    color: #ffb8d9 !important;
+    border: 1px solid #79546f;
+    box-shadow: 0 4px 15px rgba(255, 184, 217, 0.08);
+}
+
+/* 💗 About heading and description */
+body.dark-mode .about h2 {
+    color: #ffd1e5 !important;
+}
+
+body.dark-mode .about p {
+    color: #fce8f1 !important;
+}
+
+/* 🎀 Contact section - dreamy night style */
+
+body.dark-mode .contact .section-label {
+    background-color: #49334f !important;
+    color: #ffb8d9 !important;
+    border: 1px solid #79546f;
+    box-shadow: 0 4px 15px rgba(255, 184, 217, 0.08);
+}
+
+body.dark-mode .contact h2 {
+    color: #ffd1e5 !important;
+}
+
+body.dark-mode .contact p {
+    color: #fce8f1 !important;
+}
+
+/* 💌 Email, Instagram & LinkedIn */
+body.dark-mode .contact a {
+    color: #ffb8d9 !important;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .contact a:hover {
+    color: #ffffff !important;
+}
+
+/* 💜 Contact cards */
+body.dark-mode .contact-card {
+    background-color: #403047 !important;
+    color: #fce8f1 !important;
+    border-color: #72536d !important;
+}
+
+/* =====================================
+   📱 SHERA'S RESPONSIVE DESIGN
+===================================== */
+
+/* Tablet dan layar kecil */
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .projects,
+    .about,
+    .contact {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+/* HP */
+@media (max-width: 600px) {
+
+    /* Mencegah halaman melebar ke samping */
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+        width: auto;
+        margin: 12px;
+        padding: 18px 12px;
+        gap: 14px;
+        border-radius: 24px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .theme-toggle {
+        min-width: 42px;
+        min-height: 42px;
+    }
+
+    /* Semua section */
+    section {
+        padding: 36px 18px;
+    }
+
+    /* Judul */
+    h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+        line-height: 1.15;
+    }
+
+    h2 {
+        font-size: clamp(1.6rem, 7vw, 2.2rem);
+        line-height: 1.25;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    /* Home / hero */
+    .hero {
+        flex-direction: column;
+        gap: 28px;
+        text-align: center;
+    }
+
+    .hero img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* About */
+    .about img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Projects: satu kartu per baris */
+    .project-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .project-card {
+        width: auto;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .project-card img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Contact */
+    .contact-card {
+        width: auto;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+    }
+
+    .contact a {
+        overflow-wrap: anywhere;
+    }
+}
+
+/* Elemen tidak melebihi lebar layar */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* 📱 SHERA'S MOBILE LAYOUT FIX */
+
+@media (max-width: 600px) {
+
+    /* Navbar tidak terpotong */
+    header {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        width: 100%;
+        margin: 0;
+        padding: 16px 12px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        box-sizing: border-box;
+    }
+
+    /* Home tidak keluar layar */
+    .hero {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 28px 16px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    /* Teks sambutan */
+    .greeting {
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+    }
+
+    /* Jerapah tetap proporsional */
+    .hero img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* 🎀 Fix dekorasi pita di layar HP */
+@media (max-width: 600px) {
+
+    .hero {
+        position: relative;
+    }
+
+    .hero .bow,
+    .hero .ribbon,
+    .hero .decoration-bow {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        left: auto;
+        transform: none;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .greeting {
+        position: relative;
+        z-index: 2;
+        margin-top: 20px;
+        margin-right: 32px;
+    }
+}
+
+/* 💗 Floating hearts around the giraffe */
+@media (max-width: 600px) {
+
+    .hero .heart,
+    .hero .floating-heart,
+    .hero .decoration-heart {
+        animation: gentleHeartFloat 3s ease-in-out infinite;
+        transform-origin: center;
+        pointer-events: none;
+    }
+
+    .hero .heart:nth-of-type(2),
+    .hero .floating-heart:nth-of-type(2),
+    .hero .decoration-heart:nth-of-type(2) {
+        animation-delay: 0.8s;
+    }
+
+    .hero .heart:nth-of-type(3),
+    .hero .floating-heart:nth-of-type(3),
+    .hero .decoration-heart:nth-of-type(3) {
+        animation-delay: 1.5s;
+    }
+}
+
+@keyframes gentleHeartFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-4deg);
+    }
+
+    50% {
+        transform: translateY(-6px) rotate(4deg);
+    }
+}
+
+/* 🎀 Rapikan About Section di HP */
+@media (max-width: 600px) {
+
+    /* Label Get to know me */
+    .about .section-label {
+        display: table;
+        max-width: 100%;
+        margin: 0 auto 18px;
+        text-align: center;
+    }
+
+    /* Judul About Me dan pita */
+    .about h2 {
+        position: relative;
+        text-align: center;
+        font-size: 30px;
+        line-height: 1.35;
+        margin: 16px 0 24px;
+        overflow-wrap: break-word;
+    }
+
+    /* Foto profil */
+    .about img {
+        display: block;
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        margin: 20px auto;
+        object-fit: contain;
+    }
+
+    /* Hindari isi About keluar dari layar */
+    .about {
+        width: 100%;
+        max-width: 100%;
+        padding: 28px 18px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+}
+
+/* 🎀 Rapikan Projects Section di HP */
+@media (max-width: 600px) {
+
+    /* Section Projects */
+    .projects {
+        width: 100%;
+        max-width: 100%;
+        padding: 36px 16px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    /* Label kecil di atas judul */
+    .projects .section-label {
+        display: table;
+        max-width: 100%;
+        margin: 0 auto 20px;
+        padding: 10px 16px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Judul My Projects */
+    .projects h2 {
+        text-align: center;
+        font-size: 30px;
+        line-height: 1.35;
+        margin: 16px 0 20px;
+        overflow-wrap: break-word;
+    }
+
+    /* Deskripsi Projects */
+    .projects .projects-intro {
+        max-width: 100%;
+        margin: 0 auto 28px;
+        text-align: center;
+        line-height: 1.8;
+        overflow-wrap: anywhere;
+    }
+
+    /* Satu kartu per baris */
+    .project-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Kartu Project */
+    .project-card {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        margin: 0;
+        padding: 20px 16px;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    /* Gambar di kartu */
+    .project-card img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto 20px;
+        object-fit: contain;
+    }
+
+    /* Judul kartu */
+    .project-card h3 {
+        font-size: 21px;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+
+    /* Deskripsi kartu */
+    .project-card p {
+        line-height: 1.8;
+        overflow-wrap: anywhere;
+    }
+
+    /* Tag teknologi */
+    .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+}
+
+/* 💗 Perkecil tulisan Send Me Some Love di HP */
+@media (max-width: 600px) {
+    #love-button {
+        font-size: 13px;
+        padding: 10px 16px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* 🎀 HAMBURGER MENU SHERA */
+
+.hamburger {
+    display: none;
+    border: 1px solid #ffd1e4;
+    border-radius: 14px;
+    background: #ffe5ef;
+    color: #c84f7e;
+    font-size: 25px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hamburger:hover {
+    background: #ffd1e4;
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+}
+
+/* 🌙 Warna hamburger saat Night Mode */
+body.dark-mode .hamburger {
+    background: #49334f;
+    color: #ffb8d9;
+    border-color: #79546f;
+}
+
+/* 📱 Tampilan HP */
+@media (max-width: 600px) {
+
+    .navbar {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .hamburger {
+        display: inline-flex;
+        flex-shrink: 0;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+        width: 100%;
+        padding: 12px;
+        margin-top: 8px;
+        background: #fff0f6;
+        border: 1px solid #ffd1e4;
+        border-radius: 20px;
+        box-sizing: border-box;
+        box-shadow: 0 8px 20px rgba(200, 79, 126, 0.10);
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: menuAppear 0.25s ease;
+    }
+
+    .nav-links a {
+        display: block;
+        text-align: center;
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .nav-links a:hover {
+        background: #ffe0ec;
+    }
+
+    /* Night Mode */
+    body.dark-mode .nav-links {
+        background: #30253a;
+        border-color: #79546f;
+    }
+
+    body.dark-mode .nav-links a {
+        color: #ffe5f0;
+    }
+
+    body.dark-mode .nav-links a:hover {
+        background: #49334f;
+    }
+}
+
+@keyframes menuAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* 🎀 Coquette Hamburger Menu */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #d66b91;
+    background: #fff0f5;
+    border: 2px solid #ffd1df;
+    border-radius: 12px;
+    padding: 6px 12px;
+    transition: transform 0.25s ease,
+                background 0.25s ease;
+}
+
+.hamburger:hover {
+    background: #ffe0eb;
+    transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 0;
+        width: 220px;
+        padding: 24px 16px;
+
+        background: #fff0f5;
+        border: 2px solid #ffd1df;
+        border-radius: 22px;
+        box-shadow: 0 8px 24px rgba(214, 107, 145, 0.18);
+
+        z-index: 1000;
+        list-style: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: menuPop 0.25s ease;
+    }
+
+    .nav-links li {
+        list-style: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 8px;
+        color: #b95079;
+        text-decoration: none;
+        border-radius: 12px;
+        transition: background 0.2s ease,
+                    transform 0.2s ease;
+    }
+
+    .nav-links a:hover {
+        background: #ffe0eb;
+        transform: translateY(-2px);
+    }
+}
+
+@keyframes menuPop {
+    from {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* 🌙 Warna menu saat Night Mode */
+body.dark-mode .hamburger {
+    color: #ffc1d7;
+    background: #3b2938;
+    border-color: #76506a;
+}
+
+body.dark-mode .nav-links {
+    background: #3b2938;
+    border-color: #76506a;
+}
+
+body.dark-mode .nav-links a {
+    color: #ffc1d7;
+}
+
+body.dark-mode .nav-links a:hover {
+    background: #53384c;
+}
+
+/* 🎀 SHERA'S COQUETTE HOME */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 75px 8%;
+    min-height: 480px;
+    background: linear-gradient(135deg, #fff6f9, #ffe4ee, #fff0f5);
+    border-radius: 0 0 45px 45px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 580px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-note {
+    display: inline-block;
+    color: #d85d8b;
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    transform:none;
+}
+
+.hero-eyebrow {
+    color: #c56a8b;
+    font-size: 0.78rem;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    color: #bd507d;
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    line-height: 1.15;
+    margin: 0 0 20px;
+}
+
+.hero h1 span {
+    color: #e66d9c;
+}
+
+.hero-description {
+    max-width: 450px;
+    color: #87556b;
+    font-size: 1.08rem;
+    line-height: 1.9;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 13px 23px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.hero-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(205, 91, 135, 0.2);
+}
+
+.primary-btn {
+    color: white;
+    background: linear-gradient(135deg, #f18ab0, #d9578a);
+    border: 2px solid #e879a3;
+}
+
+.secondary-btn {
+    color: #c35380;
+    background: #fffafd;
+    border: 2px solid #f3a2bf;
+}
+
+.hero-decoration {
+    color: #e879a3;
+    margin-top: 30px;
+    letter-spacing: 2px;
+}
+
+.hero-art {
+    flex: 0.8;
+    min-height: 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.giraffe-illustration {
+    font-size: clamp(5rem, 12vw, 9rem);
+    animation: giraffeFloat 3s ease-in-out infinite;
+}
+
+.giraffe-caption {
+    color: #c45b85;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.floating-heart {
+    position: absolute;
+    color: #e66d9c;
+    font-size: 2rem;
+    animation: heartFloat 2.5s ease-in-out infinite;
+}
+
+.heart-one {
+    top: 15%;
+    left: 15%;
+}
+
+.heart-two {
+    right: 13%;
+    top: 35%;
+    animation-delay: 0.6s;
+}
+
+.heart-three {
+    bottom: 18%;
+    left: 18%;
+    animation-delay: 1s;
+}
+
+@keyframes giraffeFloat {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes heartFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* 🌙 Tetap cantik saat Night Mode */
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #30232f, #493043, #352532);
+}
+
+body.dark-mode .hero h1,
+body.dark-mode .hero h1 span {
+    color: #ffc1d7;
+}
+
+body.dark-mode .hero-note,
+body.dark-mode .hero-eyebrow,
+body.dark-mode .hero-description,
+body.dark-mode .hero-decoration,
+body.dark-mode .giraffe-caption {
+    color: #f4b5d0;
+}
+
+body.dark-mode .hero-art {
+    background: rgba(255, 235, 245, 0.05);
+    border-color: #93617e;
+}
+
+body.dark-mode .secondary-btn {
+    color: #ffc1d7;
+    background: #493043;
+    border-color: #93617e;
+}
+
+/* 📱 Home responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 48px 22px;
+        gap: 35px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-art {
+        width: min(100%, 340px);
+        min-height: 230px;
+        box-sizing: border-box;
+    }
+
+    .hero-decoration {
+        font-size: 0.85rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .giraffe-illustration,
+    .floating-heart {
+        animation: none;
+    }
+}
+
+/* 🎀 SKILLS & ACHIEVEMENTS */
+
+.skills,
+.achievements {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.skills h2,
+.achievements h2 {
+    color: #c95783;
+    margin-bottom: 14px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.skill-card,
+.achievement-card {
+    background: #fff5f9;
+    border: 1px solid #f5bfd2;
+    border-radius: 22px;
+    padding: 24px;
+    box-shadow: 0 6px 18px rgba(201, 87, 131, 0.08);
+    transition: transform 0.25s ease;
+}
+
+.skill-card:hover,
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card h3,
+.achievement-card h3 {
+    color: #c95783;
+}
+
+.skill-card p,
+.achievement-card p {
+    line-height: 1.8;
+}
+
+.achievement-card {
+    max-width: 600px;
+    margin: 30px auto 0;
+}
+
+.achievement-card a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    background: #e66d9c;
+    color: white;
+    text-decoration: none;
+}
+
+body.dark-mode .skills h2,
+body.dark-mode .achievements h2,
+body.dark-mode .skill-card h3,
+body.dark-mode .achievement-card h3 {
+    color: #ffc1d7;
+}
+
+body.dark-mode .skill-card,
+body.dark-mode .achievement-card {
+    background: #3b2938;
+    border-color: #76506a;
+    color: #f5dce8;
+}
+
+@media (max-width: 768px) {
+    .skills,
+    .achievements {
+        padding: 48px 20px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 🎀 SHERA'S WORLD — PORTFOLIO SECTIONS */
+
+.section {
+    padding: 75px 8%;
+    scroll-margin-top: 30px;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin: 0 auto 36px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin: 10px 0;
+    color: #c95783;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.section-heading > p:last-child {
+    color: #87556b;
+    line-height: 1.8;
+}
+
+.section-label {
+    color: #d66b91;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* ABOUT ME */
+
+.about-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px;
+    text-align: center;
+    background: #fff5f9;
+    border: 2px solid #f5bfd2;
+    border-radius: 28px;
+    box-shadow: 0 10px 30px rgba(201, 87, 131, 0.09);
+}
+
+.about-decoration {
+    color: #e66d9c;
+    font-size: 1.8rem;
+}
+
+.about-avatar {
+    display: grid;
+    place-items: center;
+    width: 105px;
+    height: 105px;
+    margin: 15px auto;
+    border-radius: 50%;
+    background: #ffe1ed;
+    border: 2px dashed #ef9fbc;
+    font-size: 2.8rem;
+}
+
+.about-card > h3 {
+    color: #c95783;
+    overflow-wrap: anywhere;
+}
+
+.about-role {
+    color: #d66b91;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+.about-description {
+    max-width: 680px;
+    margin: 20px auto 28px;
+    color: #87556b;
+    line-height: 1.9;
+}
+
+.profile-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.profile-item {
+    padding: 17px;
+    background: #ffebf3;
+    border-radius: 16px;
+    overflow-wrap: anywhere;
+}
+
+.profile-item span,
+.profile-item strong {
+    display: block;
+}
+
+.profile-item span {
+    margin-bottom: 8px;
+    color: #c95783;
+}
+
+.profile-item strong {
+    color: #87556b;
+    line-height: 1.6;
+}
+
+/* EDUCATION & ORGANIZATION */
+
+.about-subsection {
+    margin-top: 38px;
+    text-align: left;
+}
+
+.about-subsection > h3 {
+    color: #c95783;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.timeline {
+    display: grid;
+    gap: 16px;
+    padding-left: 15px;
+    border-left: 3px solid #f2a8c2;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 18px;
+    background: #ffebf3;
+    border-radius: 16px;
+}
+
+.timeline-item::before {
+    content: "♡";
+    position: absolute;
+    left: -29px;
+    top: 16px;
+    color: #d9578a;
+    font-size: 1.2rem;
+}
+
+.timeline-year {
+    display: inline-block;
+    color: #d9578a;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.timeline-item h4,
+.experience-card h4 {
+    color: #9e426a;
+    margin: 4px 0 8px;
+    line-height: 1.6;
+}
+
+.timeline-item p,
+.experience-card p {
+    color: #87556b;
+    line-height: 1.8;
+    margin: 5px 0;
+}
+
+.experience-card {
+    padding: 22px;
+    background: #ffebf3;
+    border: 1px solid #f5bfd2;
+    border-radius: 20px;
+}
+
+.experience-role {
+    font-weight: 600;
+}
+
+/* WHAT I CAN DO */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.skill-card {
+    padding: 25px 18px;
+    text-align: center;
+    background: #fff5f9;
+    border: 1px solid #f5bfd2;
+    border-radius: 23px;
+    box-shadow: 0 7px 20px rgba(201, 87, 131, 0.07);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(201, 87, 131, 0.13);
+}
+
+.skill-icon {
+    font-size: 2rem;
+}
+
+.skill-card h3 {
+    color: #c95783;
+}
+
+.skill-card p {
+    color: #87556b;
+    line-height: 1.7;
+}
+
+/* ACHIEVEMENT */
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1050px;
+    margin: auto;
+    align-items: stretch;
+}
+
+.achievement-card {
+    padding: 26px;
+    background: #fff5f9;
+    border: 1px solid #f5bfd2;
+    border-radius: 24px;
+    box-shadow: 0 7px 20px rgba(201, 87, 131, 0.07);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(201, 87, 131, 0.13);
+}
+
+.achievement-icon {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+.achievement-type {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    background: #ffdfeb;
+    border-radius: 30px;
+    color: #b95079;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.achievement-card h3 {
+    color: #c95783;
+    line-height: 1.5;
+}
+
+.achievement-card p {
+    color: #87556b;
+    line-height: 1.8;
+}
+
+.achievement-meta {
+    font-size: 0.92rem;
+}
+
+.achievement-footnote {
+    text-align: center;
+    color: #c95783;
+    margin-top: 28px;
+    line-height: 1.8;
+}
+
+/* CONTACT */
+
+.contact-card {
+    max-width: 680px;
+    margin: auto;
+    padding: 32px;
+    background: #fff5f9;
+    border: 2px solid #f5bfd2;
+    border-radius: 26px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(201, 87, 131, 0.08);
+}
+
+.contact-decoration {
+    color: #e66d9c;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.contact-card > p {
+    color: #87556b;
+    line-height: 1.8;
+}
+
+.contact-links {
+    display: grid;
+    gap: 13px;
+    margin: 25px 0;
+    text-align: left;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 17px;
+    background: #ffebf3;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    color: #b95079;
+    text-decoration: none;
+    transition: transform 0.2s ease,
+                background 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    background: #ffe0eb;
+    border-color: #f2a8c2;
+}
+
+.contact-link-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.contact-footer {
+    margin-top: 25px;
+    font-size: 0.9rem;
+}
+
+/* 🌙 NIGHT MODE */
+
+body.dark-mode .section-heading h2,
+body.dark-mode .about-card > h3,
+body.dark-mode .about-subsection > h3,
+body.dark-mode .timeline-item h4,
+body.dark-mode .experience-card h4,
+body.dark-mode .skill-card h3,
+body.dark-mode .achievement-card h3 {
+    color: #ffc1d7;
+}
+
+body.dark-mode .section-heading > p:last-child,
+body.dark-mode .about-description,
+body.dark-mode .profile-item strong,
+body.dark-mode .timeline-item p,
+body.dark-mode .experience-card p,
+body.dark-mode .skill-card p,
+body.dark-mode .achievement-card p,
+body.dark-mode .contact-card > p {
+    color: #f5dce8;
+}
+
+body.dark-mode .section-label,
+body.dark-mode .about-role,
+body.dark-mode .profile-item span,
+body.dark-mode .timeline-year,
+body.dark-mode .achievement-footnote {
+    color: #ffc1d7;
+}
+
+body.dark-mode .about-card,
+body.dark-mode .skill-card,
+body.dark-mode .achievement-card,
+body.dark-mode .contact-card {
+    background: #3b2938;
+    border-color: #76506a;
+}
+
+body.dark-mode .about-avatar,
+body.dark-mode .profile-item,
+body.dark-mode .timeline-item,
+body.dark-mode .experience-card {
+    background: #493043;
+    border-color: #76506a;
+}
+
+body.dark-mode .timeline {
+    border-left-color: #93617e;
+}
+
+body.dark-mode .achievement-type {
+    color: #ffc1d7;
+    background: #53384c;
+}
+
+body.dark-mode .contact-item {
+    color: #ffc1d7;
+    background: #493043;
+    border-color: #76506a;
+}
+
+body.dark-mode .contact-item:hover {
+    background: #53384c;
+}
+
+/* 📱 RESPONSIVE */
+
+@media (max-width: 768px) {
+    .section {
+        padding: 50px 20px;
+    }
+
+    .about-card,
+    .contact-card {
+        padding: 24px 18px;
+    }
+
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid,
+    .achievement-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .skill-card,
+    .achievement-card {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid,
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .timeline {
+        margin-left: 8px;
+    }
+}
+
+/* 🎀 ABOUT ME — COQUETTE EDITION */
+
+.about {
+    position: relative;
+}
+
+.about-eyebrow {
+    display: inline-block;
+    color: #cf6a91;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 8px;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* PROFILE */
+
+.about-profile {
+    position: relative;
+    overflow: hidden;
+    padding: 38px 32px;
+    text-align: center;
+    background: linear-gradient(145deg, #fff7fa, #ffe8f1);
+    border: 1px solid #f2c3d4;
+    border-radius: 30px;
+    box-shadow: 0 12px 32px rgba(190, 100, 137, 0.10);
+}
+
+.about-ribbon {
+    position: absolute;
+    top: 16px;
+    right: 22px;
+    color: #d66b91;
+    font-size: 2rem;
+}
+
+.about-avatar {
+    width: 104px;
+    height: 104px;
+    margin: 0 auto 15px;
+    display: grid;
+    place-items: center;
+    background: #fffafd;
+    border: 2px dashed #e9a6bf;
+    border-radius: 50%;
+    font-size: 3.5rem;
+    box-shadow: 0 5px 15px rgba(190, 100, 137, 0.10);
+}
+
+.about-greeting {
+    color: #c95783;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 12px 0;
+}
+
+.about-name {
+    max-width: 650px;
+    margin: 0 auto 10px;
+    color: #a74770;
+    font-size: clamp(1.35rem, 3.5vw, 2rem);
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.about-major {
+    margin: 0;
+    color: #c95783;
+    font-weight: 700;
+}
+
+.about-university {
+    margin: 8px 0;
+    color: #91657a;
+    line-height: 1.7;
+}
+
+.about-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 260px;
+    margin: 22px auto;
+    color: #d66b91;
+}
+
+.about-divider::before,
+.about-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #edb5ca;
+}
+
+.about-bio {
+    max-width: 680px;
+    margin: 0 auto;
+    color: #79566a;
+    font-size: 0.98rem;
+    line-height: 1.95;
+}
+
+.about-badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.about-badges span {
+    padding: 9px 14px;
+    color: #a74770;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid #f0c2d4;
+    border-radius: 30px;
+    font-size: 0.83rem;
+}
+
+/* INFORMATION CARDS */
+
+.about-info {
+    padding: 28px;
+    background: #fffafd;
+    border: 1px solid #f2d1df;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(190, 100, 137, 0.06);
+}
+
+.about-section-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 23px;
+}
+
+.about-title-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    color: #c95783;
+    background: #ffe8f1;
+    border-radius: 16px;
+    font-size: 1.35rem;
+}
+
+.about-section-title h3 {
+    margin: 0 0 5px;
+    color: #a74770;
+    font-size: 1.2rem;
+}
+
+.about-section-title p {
+    margin: 0;
+    color: #997489;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+/* PERSONAL DETAILS */
+
+.about-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.about-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    padding: 17px;
+    background: #fff1f7;
+    border-radius: 17px;
+    min-width: 0;
+}
+
+.info-icon {
+    flex-shrink: 0;
+    font-size: 1.35rem;
+}
+
+.info-label {
+    display: block;
+    margin-bottom: 6px;
+    color: #bf6388;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.about-info-item p {
+    margin: 0;
+    color: #79566a;
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+
+/* EDUCATION TIMELINE */
+
+.about-timeline {
+    margin-left: 9px;
+    padding-left: 24px;
+    border-left: 2px solid #efbfd1;
+}
+
+.about-timeline-item {
+    position: relative;
+    padding: 0 0 25px;
+}
+
+.about-timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.about-timeline-item::before {
+    content: "♡";
+    position: absolute;
+    top: 0;
+    left: -36px;
+    display: grid;
+    place-items: center;
+    width: 23px;
+    height: 23px;
+    color: #c95783;
+    background: #ffe8f1;
+    border-radius: 50%;
+    font-size: 0.85rem;
+}
+
+.timeline-date {
+    display: inline-block;
+    margin-bottom: 6px;
+    color: #c95783;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.about-timeline-item h4,
+.about-organization h4 {
+    margin: 0 0 5px;
+    color: #a74770;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.about-timeline-item p,
+.about-organization p {
+    margin: 0;
+    color: #89677a;
+    font-size: 0.92rem;
+    line-height: 1.8;
+}
+
+/* ORGANIZATION */
+
+.about-organization {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px;
+    background: #fff1f7;
+    border: 1px solid #f3d2e0;
+    border-radius: 20px;
+}
+
+.organization-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: #ffe0ec;
+    border-radius: 15px;
+    font-size: 1.5rem;
+}
+
+.organization-content {
+    min-width: 0;
+}
+
+.about-organization .organization-role {
+    margin: 6px 0 10px;
+    color: #bd5a83;
+    font-weight: 700;
+}
+
+/* CLOSING QUOTE */
+
+.about-closing {
+    margin: 0;
+    padding: 18px;
+    color: #bd5a83;
+    text-align: center;
+    font-size: 0.98rem;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+/* 🌙 NIGHT MODE — ABOUT ONLY */
+
+body.dark-mode .about-profile {
+    background: linear-gradient(145deg, #3b2938, #493043);
+    border-color: #76506a;
+}
+
+body.dark-mode .about-info {
+    background: #352735;
+    border-color: #65465b;
+}
+
+body.dark-mode .about-name,
+body.dark-mode .about-section-title h3,
+body.dark-mode .about-timeline-item h4,
+body.dark-mode .about-organization h4 {
+    color: #ffc1d7;
+}
+
+body.dark-mode .about-greeting,
+body.dark-mode .about-major,
+body.dark-mode .about-eyebrow,
+body.dark-mode .timeline-date,
+body.dark-mode .about-closing,
+body.dark-mode .about-organization .organization-role {
+    color: #ffc1d7;
+}
+
+body.dark-mode .about-university,
+body.dark-mode .about-bio,
+body.dark-mode .about-section-title p,
+body.dark-mode .about-info-item p,
+body.dark-mode .about-timeline-item p,
+body.dark-mode .about-organization p {
+    color: #f3dce7;
+}
+
+body.dark-mode .about-avatar {
+    background: #493043;
+    border-color: #93617e;
+}
+
+body.dark-mode .about-badges span {
+    color: #ffc1d7;
+    background: #493043;
+    border-color: #76506a;
+}
+
+body.dark-mode .about-title-icon,
+body.dark-mode .about-info-item,
+body.dark-mode .about-organization {
+    background: #493043;
+    border-color: #76506a;
+}
+
+body.dark-mode .about-timeline {
+    border-left-color: #76506a;
+}
+
+body.dark-mode .about-timeline-item::before {
+    color: #ffc1d7;
+    background: #493043;
+}
+
+/* 📱 RESPONSIVE */
+
+@media (max-width: 600px) {
+    .about-profile {
+        padding: 32px 20px;
+    }
+
+    .about-info {
+        padding: 22px 18px;
+    }
+
+    .about-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-organization {
+        padding: 17px;
+        gap: 12px;
+    }
+
+    .about-avatar {
+        width: 88px;
+        height: 88px;
+        font-size: 3rem;
+    }
+
+    .about-badges span {
+        font-size: 0.78rem;
+    }
+}
+
+/* 🎀 Foto profil Shera */
+
+.about-avatar {
+    width: 130px;
+    height: 130px;
+    box-sizing: border-box;
+    margin: 0 auto 18px;
+    padding: 5px;
+
+    border: 2px solid #e9a6bf;
+    border-radius: 50%;
+    background: #fffafd;
+
+    overflow: hidden;
+    flex-shrink: 0;
+
+    box-shadow: 0 6px 18px rgba(190, 100, 137, 0.18);
+}
+
+.about-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 25%;
+
+    border-radius: 50%;
+}
+
+/* 🌙 Foto saat Night Mode */
+
+body.dark-mode .about-avatar {
+    background: #493043;
+    border-color: #93617e;
+}
+
+/* 📱 Ukuran foto di HP */
+
+@media (max-width: 600px) {
+    .about-avatar {
+        width: 112px;
+        height: 112px;
+    }
+}
+ 
+/* 🎀 ABOUT ME — MOBILE POLISH */
+@media (max-width: 600px) {
+ 
+    .about-profile {
+        padding: 32px 18px 28px;
+        border-radius: 26px;
+    }
+ 
+}   
+ 
+ 
+/* 🎀 Bingkai foto About Me */
+.about-avatar {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 24px;
+    padding: 0;
+ 
+    border: 3px solid #efa4c0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    overflow: hidden;
+ 
+    display: block;
+    flex: 0 0 180px;
+}
+ 
+/* .about .about-avatar img dipakai supaya lebih kuat
+   daripada aturan lama ".about img" (border 5px & margin) */
+.about .about-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+ 
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+ 
+    object-fit: cover;
+    object-position: center 25%;
+}
+ 
+@media (max-width: 600px) {
+    .about-avatar {
+        width: 130px;
+        height: 130px;
+        flex-basis: 130px;
+    }
+}
+ 
+/* Kartu informasi */
+.about-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+ 
+    min-width: 0;
+    padding: 22px 16px;
+ 
+    text-align: center;
+    background: #fff1f7;
+    border: 1px solid #f4d4e1;
+    border-radius: 20px;
+ 
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+ 
+.about-info-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(190, 100, 137, 0.10);
+}
+ 
+.about-info-item .info-icon {
+    display: block;
+    font-size: 1.7rem;
+    line-height: 1.2;
+}
+ 
+.about-info-item .info-label {
+    display: block;
+    margin: 0 0 6px;
+ 
+    color: #bf6388;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-align: center;
+}
+ 
+.about-info-item p {
+    margin: 0;
+    width: 100%;
+ 
+    color: #79566a;
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.7;
+ 
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+ 
+/* Judul Personal Information */
+.about-info > .about-section-title {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+ 
+.about-info > .about-section-title > div {
+    min-width: 0;
+}
+ 
+.about-info > .about-section-title h3,
+.about-info > .about-section-title p {
+    text-align: center;
+}
+ 
+/* 🌙 Night Mode */
+body.dark-mode .about-info-item {
+    background: #493043;
+    border-color: #76506a;
+}
+ 
+body.dark-mode .about-info-item .info-label {
+    color: #ffc1d7;
+}
+ 
+body.dark-mode .about-info-item p {
+    color: #f3dce7;
+}
+ 
+/* 📱 Tampilan HP */
+@media (max-width: 600px) {
+    .about-info-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+ 
+    .about-info-item {
+        padding: 20px 16px;
+        border-radius: 18px;
+    }
+ 
+    .about-info-item p {
+        max-width: 280px;
+        margin: 0 auto;
+        font-size: 0.9rem;
+    }
+ 
+    .about-info > .about-section-title {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ✨ SHERA'S WORLD — SOFT CURSOR SPARKLES */
+.shera-cursor-sparkle {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  pointer-events: none;
+  user-select: none;
+  color: #e8a9c5;
+  font-size: 12px;
+  line-height: 1;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+  animation: sheraSparkleFade 700ms ease-out forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes sheraSparkleFade {
+  0% {
+    opacity: 0.85;
+    transform: translate(-50%, -50%) scale(0.6) rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(
+      calc(-50% + var(--sparkle-x)),
+      calc(-50% + var(--sparkle-y))
+    ) scale(1.3) rotate(35deg);
+  }
+}
+
+/*tampilkan efek pada perangkat layar sentuh */
+@media (hover: none), (pointer: coarse) {
+  .shera-cursor-sparkle {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shera-cursor-sparkle {
+    animation: none;
+    display: none;
+  }
+}
+/* FIX: About Me photo in Night Mode */
+body.dark-mode .about .about-photo img {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    object-fit: cover;
+}
+
+/* FIX: About Me profile photo — Light & Night Mode */
+.about .about-avatar {
+    width: 195px;
+    height: 195px;
+    margin: 0 auto 25px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #d99ab8;
+    background: #f3dce8;
+}
+
+.about .about-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    object-position: center;
+    border: none;
+    border-radius: 50%;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Pastikan foto tetap terlihat di Night Mode */
+body.dark-mode .about .about-avatar {
+    background: #493349;
+    border-color: #a66b8e;
+}
+
+body.dark-mode .about .about-avatar img {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ✨ FIX: My Little Superpowers */
+.my-superpowers,
+.superpowers,
+.little-wins {
+    position: relative;
+    isolation: isolate;
+}
+
+/* Judul section lebih jelas */
+.my-superpowers h2,
+.superpowers h2,
+.little-wins h2 {
+    color: #bd5678;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Kartu atau area konten agar terpisah dari background */
+.my-superpowers .skill-tag,
+.superpowers .skill-tag,
+.little-wins .skill-tag {
+    background: #fff7fa;
+    border: 1px solid #f0c3d3;
+    border-radius: 18px;
+    box-shadow: 0 5px 16px rgba(189, 86, 120, 0.10);
+}
+
+/* Night Mode */
+body.dark-mode .my-superpowers h2,
+body.dark-mode .superpowers h2,
+body.dark-mode .little-wins h2 {
+    color: #ffc6dc;
+    text-shadow: none;
+}
+
+body.dark-mode .my-superpowers .skill-tag,
+body.dark-mode .superpowers .skill-tag,
+body.dark-mode .little-wins .skill-tag {
+    background: #493349;
+    color: #ffe6ef;
+    border-color: #76516d;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* FIX: Skills section heading contrast */
+#skills .section-heading {
+    position: relative;
+    padding: 28px 20px;
+    margin-bottom: 28px;
+    background: linear-gradient(135deg, #fff5f8, #ffffff);
+    border: 1px solid #f3cbd9;
+    border-radius: 22px;
+    box-shadow: 0 8px 24px rgba(189, 86, 120, 0.10);
+}
+
+#skills .section-heading .section-label {
+    display: inline-block;
+    padding: 7px 15px;
+    margin-bottom: 12px;
+    color: #a94d70;
+    background: #ffe3ed;
+    border: 1px solid #f2c0d2;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+#skills .section-heading h2 {
+    color: #bd5678;
+    margin-bottom: 10px;
+}
+
+#skills .section-heading > p:last-child {
+    color: #765563;
+}
+
+/* Night Mode */
+body.dark-mode #skills .section-heading {
+    background: linear-gradient(135deg, #38283a, #302338);
+    border-color: #63415b;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode #skills .section-heading .section-label {
+    color: #ffd5e4;
+    background: #493349;
+    border-color: #76516d;
+}
+
+body.dark-mode #skills .section-heading h2 {
+    color: #ffc6dc;
+}
+
+body.dark-mode #skills .section-heading > p:last-child {
+    color: #f0dce7;
+}
+
+/* ===== SECTION HEADING: CLEAR & ELEGANT ===== */
+
+#skills .section-heading .section-label,
+#achievements .section-heading .section-label {
+    display: inline-block;
+    color: #b45f83;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    opacity: 1;
+    text-shadow: none;
+}
+
+#skills .section-heading h2,
+#achievements .section-heading h2 {
+    color: #75445c;
+    font-weight: 700;
+    opacity: 1;
+    text-shadow: none;
+}
+
+#skills .section-heading > p:not(.section-label),
+#achievements .section-heading > p:not(.section-label) {
+    color: #75616b;
+    opacity: 1;
+    line-height: 1.8;
+}
+
+/* NIGHT MODE */
+body.dark-mode #skills .section-heading .section-label,
+body.dark-mode #achievements .section-heading .section-label {
+    color: #f0a8cb;
+}
+
+body.dark-mode #skills .section-heading h2,
+body.dark-mode #achievements .section-heading h2 {
+    color: #ffe0ee;
+}
+
+body.dark-mode #skills .section-heading > p:not(.section-label),
+body.dark-mode #achievements .section-heading > p:not(.section-label) {
+    color: #e2d3dc;
+}
+/* 🎀 FIX KHUSUS: LITTLE WINS, BIG DREAMS */
+
+#achievements .section-heading .section-label {
+display: inline-block !important;
+color: #a94370 !important;
+background-color: #ffe3ee !important;
+padding: 9px 18px !important;
+margin-bottom: 14px !important;
+border: 1px solid #f0bfd2 !important;
+border-radius: 30px !important;
+font-size: 0.78rem !important;
+font-weight: 700 !important;
+letter-spacing: 1.5px !important;
+line-height: 1.6 !important;
+opacity: 1 !important;
+text-shadow: none !important;
+-webkit-text-fill-color: #a94370 !important;
+}
+
+/* 🌙 Night Mode */
+body.dark-mode #achievements .section-heading .section-label {
+color: #ffe0ed !important;
+background-color: #493043 !important;
+border-color: #93617e !important;
+-webkit-text-fill-color: #ffe0ed !important;
+}
+/* ═══════════════════════════════
+   🎀 WHAT I CAN DO — PASTEL STYLE
+═══════════════════════════════ */
+
+#skills {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Judul section */
+#skills .section-heading h2 {
+    color: #b94f7c;
+    margin-bottom: 14px;
+}
+
+#skills .section-heading > p:not(.section-label) {
+    color: #856b78;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* Label kecil di atas judul */
+#skills .section-label {
+    display: inline-block;
+    color: #a94370;
+    background: #ffe3ee;
+    border: 1px solid #f3c5d7;
+    border-radius: 30px;
+    padding: 9px 18px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+}
+
+/* Grid kartu skill */
+#skills .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+/* Kartu skill */
+#skills .skill-card {
+    position: relative;
+    overflow: hidden;
+    padding: 28px 20px;
+    text-align: center;
+    background: linear-gradient(145deg, #fffafd, #fff0f6);
+    border: 1px solid #f4d5e2;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(190, 104, 145, 0.10);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Aksen dekoratif */
+#skills .skill-card::before {
+    content: "♡";
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #edb3cc;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+/* Efek saat kartu disentuh kursor */
+#skills .skill-card:hover {
+    transform: translateY(-7px);
+    border-color: #e8a8c3;
+    box-shadow: 0 15px 30px rgba(190, 104, 145, 0.18);
+}
+
+/* Ikon skill */
+#skills .skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+#skills .skill-card:hover .skill-icon {
+    transform: scale(1.12);
+}
+
+/* Nama skill */
+#skills .skill-card h3,
+#skills .skill-card h4 {
+    color: #a94370;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+/* Deskripsi skill */
+#skills .skill-card p {
+    color: #856b78;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* 🌙 Night Mode */
+body.dark-mode #skills .section-heading h2 {
+    color: #ffd2e5;
+}
+
+body.dark-mode #skills .section-heading > p:not(.section-label) {
+    color: #e0c5d2;
+}
+
+body.dark-mode #skills .section-label {
+    color: #ffe0ed;
+    background: #493043;
+    border-color: #93617e;
+}
+
+body.dark-mode #skills .skill-card {
+    background: linear-gradient(145deg, #302532, #3d2c3b);
+    border-color: #624458;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode #skills .skill-card:hover {
+    border-color: #b77a9c;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode #skills .skill-card h3,
+body.dark-mode #skills .skill-card h4 {
+    color: #ffd2e5;
+}
+
+body.dark-mode #skills .skill-card p {
+    color: #e0c5d2;
+}
+
+body.dark-mode #skills .skill-card::before {
+    color: #b77a9c;
+}
+
+/* 📱 Tampilan HP */
+@media (max-width: 600px) {
+    #skills {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    #skills .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    #skills .skill-card {
+        padding: 24px 12px;
+        border-radius: 20px;
+    }
+
+    #skills .skill-icon {
+        font-size: 2rem;
+    }
+}
+/* ═══════════════════════════════════
+   🏆 MY ACHIEVEMENTS — PINK AESTHETIC
+═══════════════════════════════════ */
+
+#achievements {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Judul section */
+#achievements .section-heading h2 {
+    color: #b94f7c;
+    margin-bottom: 14px;
+}
+
+#achievements .section-heading > p:not(.section-label) {
+    color: #856b78;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* Label LITTLE WINS, BIG DREAMS */
+#achievements .section-heading .section-label {
+    display: inline-block;
+    color: #a94370;
+    background: #ffe3ee;
+    border: 1px solid #f3c5d7;
+    border-radius: 30px;
+    padding: 9px 18px;
+    margin-bottom: 14px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    opacity: 1;
+    text-shadow: none;
+    -webkit-text-fill-color: #a94370;
+}
+
+/* Susunan kartu prestasi */
+#achievements .achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 38px;
+}
+
+/* Kartu prestasi */
+#achievements .achievement-card {
+    position: relative;
+    overflow: hidden;
+    padding: 28px;
+    background: linear-gradient(145deg, #fffafd, #fff0f6);
+    border: 1px solid #f3d2e0;
+    border-radius: 24px;
+    box-shadow: 0 8px 25px rgba(190, 104, 145, 0.10);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Hiasan sudut */
+#achievements .achievement-card::before {
+    content: "♡";
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    color: #e8a8c3;
+    font-size: 25px;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+/* Aksen garis di atas kartu */
+#achievements .achievement-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #f5bfd5, #d98eb1, #f8d8e6);
+}
+
+/* Efek hover */
+#achievements .achievement-card:hover {
+    transform: translateY(-7px);
+    border-color: #e8a8c3;
+    box-shadow: 0 16px 32px rgba(190, 104, 145, 0.17);
+}
+
+/* Judul prestasi */
+#achievements .achievement-card h3 {
+    color: #a94370;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Deskripsi prestasi */
+#achievements .achievement-card p {
+    color: #856b78;
+    font-size: 0.92rem;
+    line-height: 1.8;
+}
+
+/* Ikon jika kartu memiliki elemen ikon */
+#achievements .achievement-card i,
+#achievements .achievement-card .achievement-icon {
+    color: #cc7099;
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+}
+
+/* 🌙 NIGHT MODE */
+body.dark-mode #achievements .section-heading h2 {
+    color: #ffd2e5;
+}
+
+body.dark-mode #achievements .section-heading > p:not(.section-label) {
+    color: #e0c5d2;
+}
+
+body.dark-mode #achievements .section-heading .section-label {
+    color: #ffe0ed;
+    background: #493043;
+    border-color: #93617e;
+    -webkit-text-fill-color: #ffe0ed;
+}
+
+body.dark-mode #achievements .achievement-card {
+    background: linear-gradient(145deg, #302532, #3d2c3b);
+    border-color: #624458;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode #achievements .achievement-card:hover {
+    border-color: #b77a9c;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode #achievements .achievement-card h3 {
+    color: #ffd2e5;
+}
+
+body.dark-mode #achievements .achievement-card p {
+    color: #e0c5d2;
+}
+
+body.dark-mode #achievements .achievement-card::before {
+    color: #c58aa8;
+}
+
+/* 📱 TABLET DAN HP */
+@media (max-width: 768px) {
+    #achievements {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    #achievements .achievement-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    #achievements .achievement-card {
+        padding: 24px;
+        border-radius: 20px;
+    }
+}
+/* 🎀 PEMISAH WHAT I CAN DO & MY ACHIEVEMENTS */
+
+#achievements {
+    position: relative;
+    padding-top: 100px;
+}
+
+/* Garis pemisah dekoratif */
+#achievements::before {
+    content: "♡  ✦  ♡";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: min(85%, 700px);
+    height: 70px;
+    margin: 0 auto 55px;
+    color: #d889ab;
+    font-size: 17px;
+    letter-spacing: 10px;
+    border-top: 1px solid #f0cbdc;
+    position: relative;
+}
+
+/* 🌙 Night Mode */
+body.dark-mode #achievements::before {
+    color: #d9a0bd;
+    border-top-color: #624458;
+}
+
+/* 📱 Tampilan HP */
+@media (max-width: 600px) {
+    #achievements {
+        padding-top: 70px;
+    }
+
+    #achievements::before {
+        width: 85%;
+        height: 50px;
+        margin-bottom: 35px;
+        font-size: 15px;
+        letter-spacing: 7px;
+    }
+}
+
+/* 🦒 Shera's Little Giraffe */
+.hero-giraffe {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================================
+   👑 SHERA'S WORLD — LUXURY PINK EDITION
+   Hero section redesign
+========================================== */
+
+#home.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 100px 7%;
+    background:
+        radial-gradient(
+            ellipse at 85% 45%,
+            rgba(244, 196, 207, 0.30),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #fffaf8 0%,
+            #fff4f5 48%,
+            #fce8ed 100%
+        );
+}
+
+/* Cahaya lembut di belakang konten Welcome */
+#home.hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    top: 8%;
+    right: 8%;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 210, 226, 0.32) 0%,
+        rgba(255, 225, 235, 0.14) 45%,
+        transparent 72%
+    );
+    filter: blur(45px);
+    z-index: -1;
+    pointer-events: none;
+}
+/* Cahaya pink lembut saat Night Mode */
+body.dark-mode #home.hero::before {
+    background: radial-gradient(
+        circle,
+        rgba(226, 137, 185, 0.24) 0%,
+        rgba(150, 74, 111, 0.12) 45%,
+        transparent 72%
+    );
+}
+
+/* Judul utama */
+#home .hero-content h1 {
+    color: #a84f70;
+    font-size: clamp(2.8rem, 5.5vw, 5rem);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    font-weight: 800;
+    text-shadow: 0 5px 20px rgba(168, 79, 112, 0.10);
+}
+
+/* Teks deskripsi */
+#home .hero-content p {
+    color: #725d65;
+    line-height: 1.9;
+    font-size: 1.08rem;
+}
+
+/* Ilustrasi jerapah tanpa bingkai */
+#home .hero-art {
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    transition: transform 0.4s ease;
+}
+
+/* Efek hover ilustrasi */
+#home .hero-art:hover {
+    transform: translateY(-5px);
+    box-shadow: none;
+}
+
+/* Jerapah */
+#home .hero-giraffe {
+    display: block;
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 15px 18px rgba(128, 78, 64, 0.12));
+    animation: giraffeFloat 4s ease-in-out infinite;
+}
+
+/* Animasi melayang lembut */
+@keyframes giraffeFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Tombol utama */
+#home .hero-content .btn-primary {
+    background: linear-gradient(
+        135deg,
+        #d98ca6,
+        #b85d7c
+    );
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(184, 93, 124, 0.23);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#home .hero-content .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 32px rgba(184, 93, 124, 0.32);
+}
+
+/* Tombol kedua */
+#home .hero-content .btn-secondary {
+    border: 1px solid #c99b91;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.65);
+    color: #9d536b;
+    transition: all 0.3s ease;
+}
+
+#home .hero-content .btn-secondary:hover {
+    background: #fff0f3;
+    border-color: #b85d7c;
+    transform: translateY(-3px);
+}
+
+/* Ornamen hati */
+#home .floating-heart {
+    color: #bd6684;
+    filter: drop-shadow(0 3px 5px rgba(189, 102, 132, 0.15));
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+    #home.hero {
+        padding: 75px 6% 60px;
+    }
+
+    #home .hero-content h1 {
+        font-size: clamp(2.4rem, 10vw, 3.5rem);
+        letter-spacing: -1px;
+    }
+
+    #home .hero-giraffe {
+        max-width: 300px;
+    }
+}
+
+/* Hormati pengaturan pengurangan animasi */
+@media (prefers-reduced-motion: reduce) {
+    #home .hero-giraffe {
+        animation: none;
+    }
+
+    #home .hero-art,
+    #home .hero-content .btn-primary,
+    #home .hero-content .btn-secondary {
+        transition: none;
+    }
+}
+/* ==========================================
+   🌙 SHERA'S WORLD — MIDNIGHT ROSE LUXURY
+========================================== */
+
+body.dark-mode #home.hero {
+    background:
+        radial-gradient(
+            ellipse at 85% 40%,
+            rgba(150, 74, 111, 0.22),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #211721 0%,
+            #30202f 50%,
+            #3b2638 100%
+        );
+    color: #f8eaf0;
+}
+
+/* Cahaya dekoratif malam */
+body.dark-mode #home.hero::before {
+    background: rgba(202, 137, 165, 0.12);
+}
+
+/* Judul utama */
+body.dark-mode #home .hero-content h1 {
+    color: #f2b8ce;
+    text-shadow:
+        0 0 22px rgba(242, 184, 206, 0.16),
+        0 5px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Teks pembuka */
+body.dark-mode #home .hero-content p {
+    color: #e1ced9;
+}
+
+/* Bingkai jerapah */
+body.dark-mode #home .hero-art {
+    border: 1.5px solid rgba(224, 190, 151, 0.72);
+    background:
+        radial-gradient(
+            ellipse at 50% 40%,
+            rgba(99, 61, 82, 0.92),
+            rgba(57, 37, 54, 0.95) 68%,
+            rgba(42, 29, 43, 0.98)
+        );
+    box-shadow:
+        0 0 0 8px rgba(255, 255, 255, 0.025),
+        0 0 0 9px rgba(224, 190, 151, 0.16),
+        0 25px 65px rgba(0, 0, 0, 0.30),
+        0 0 35px rgba(214, 145, 176, 0.08);
+}
+
+body.dark-mode #home .hero-art,
+body.dark-mode #home .hero-art:hover {
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Jerapah */
+body.dark-mode #home .hero-giraffe {
+    filter:
+        drop-shadow(0 15px 18px rgba(0, 0, 0, 0.24))
+        drop-shadow(0 0 12px rgba(255, 220, 232, 0.06));
+}
+
+/* Tombol utama */
+body.dark-mode #home .hero-content .btn-primary {
+    background: linear-gradient(
+        135deg,
+        #d78ba9,
+        #a84e75
+    );
+    color: #fff8fb;
+    border: 1px solid rgba(255, 225, 235, 0.25);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode #home .hero-content .btn-primary:hover {
+    background: linear-gradient(
+        135deg,
+        #e5a2bd,
+        #bd6489
+    );
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.32);
+}
+
+/* Tombol kedua */
+body.dark-mode #home .hero-content .btn-secondary {
+    color: #f2c6d8;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(224, 190, 151, 0.58);
+}
+
+body.dark-mode #home .hero-content .btn-secondary:hover {
+    color: #fff5f9;
+    background: rgba(215, 139, 169, 0.15);
+    border-color: #e2b58e;
+}
+
+/* Hati dan bintang dekoratif */
+body.dark-mode #home .floating-heart {
+    color: #f0a7c5;
+    filter: drop-shadow(0 0 7px rgba(240, 167, 197, 0.22));
+}
+
+/* Ornamen pemisah */
+body.dark-mode #home .hero-decoration {
+    color: #d8b68e;
+    opacity: 0.9;
+}
+
+/* Aksesibilitas animasi */
+@media (prefers-reduced-motion: reduce) {
+    body.dark-mode #home .hero-giraffe {
+        animation: none;
+    }
+}
+/* 🌙 MIDNIGHT ROSE — LUXURY FRAME */
+
+body.dark-mode #home.hero {
+    border: 1px solid rgba(224, 190, 151, 0.45);
+    border-radius: 28px;
+
+    box-shadow:
+        0 0 0 5px rgba(224, 190, 151, 0.035),
+        0 0 25px rgba(215, 139, 169, 0.10),
+        0 18px 50px rgba(0, 0, 0, 0.18);
+
+    position: relative;
+}
+
+/* ✨ Cahaya rose gold di sudut bingkai */
+body.dark-mode #home.hero {
+    outline: 1px solid rgba(215, 139, 169, 0.12);
+    outline-offset: 5px;
+}
+
+/* 🎀 Efek saat kursor menyentuh bingkai */
+@media (hover: hover) {
+    body.dark-mode #home.hero:hover {
+        box-shadow:
+            0 0 0 5px rgba(224, 190, 151, 0.05),
+            0 0 35px rgba(215, 139, 169, 0.16),
+            0 22px 55px rgba(0, 0, 0, 0.22);
+    }
+}
+/* 🦒 Membuat jerapah lebih menonjol */
+body:not(.dark-mode) #home .hero-giraffe,
+body.dark-mode #home .hero-giraffe {
+    transform: scale(1.18);
+    transform-origin: center center;
+}
+
+/* Hover tetap lembut */
+@media (hover: hover) {
+    body:not(.dark-mode) #home .hero-art:hover .hero-giraffe,
+    body.dark-mode #home .hero-art:hover .hero-giraffe {
+        transform: translateY(-3px) scale(1.22);
+    }
+}
+
+/* Ukuran normal di HP */
+@media (max-width: 600px) {
+    body:not(.dark-mode) #home .hero-giraffe,
+    body.dark-mode #home .hero-giraffe {
+        transform: scale(1.10);
+    }
+}
+/* 🎀 Hero: sudut melengkung di semua sisi */
+#home.hero {
+    border-radius: 35px;
+    margin: 10px 7%;
+}
+
+body.dark-mode #home.hero {
+    border-radius: 35px;
+}
+/* Mode terang: latar putih gambar melebur ke background hero */
+#home .hero-giraffe {
+    mix-blend-mode: multiply;
+    filter: none;
+}
+
+/* Mode gelap: multiply membuat gambar gelap, jadi pakai kartu berbingkai lembut */
+body.dark-mode #home .hero-giraffe {
+    mix-blend-mode: normal;
+    border-radius: 28px;
+    filter: none;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+/* 🌙 Jerapah transparan di dark mode: hanya shadow mengikuti bentuk */
+body.dark-mode #home .hero-art,
+body.dark-mode #home .hero-art:hover {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+}
+
+body.dark-mode #home .hero-giraffe {
+    mix-blend-mode: normal;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    filter:
+        drop-shadow(0 14px 18px rgba(0, 0, 0, 0.35))
+        drop-shadow(0 0 14px rgba(255, 200, 225, 0.12));
+}
+/* 🌙 Judul hero di dark mode: bersih dan terbaca */
+body.dark-mode #home .hero-content h1 {
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode #home .hero-content h1 span {
+    color: #ff9fc4;
+    text-shadow: 0 0 18px rgba(255, 159, 196, 0.28);
+}
+/* Shera's World ♡ lebih kecil dan tetap satu baris */
+#home .hero-content h1 span {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 0.82em;      /* 82% dari ukuran "Welcome to" */
+    letter-spacing: -0.5px;
+}
+
+/* Layar HP */
+@media (max-width: 768px) {
+    #home .hero-content h1 span {
+        font-size: 0.78em;
+    }
+}
+
+/* 🎀 SHERA'S WORLD — COQUETTE HOME */
+
+#home {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    text-align: center;
+    padding: 90px 24px;
+    border-radius: 28px;
+
+    background:
+        radial-gradient(ellipse at 12% 18%,
+            rgba(255, 210, 229, 0.75), transparent 30%),
+        radial-gradient(ellipse at 88% 80%,
+            rgba(255, 218, 235, 0.8), transparent 32%),
+        linear-gradient(135deg, #fff8fb, #ffedf5, #fff7fb);
+
+    border: 1px solid #f7d2e1;
+}
+
+/* Pita dekoratif di sudut */
+#home::before {
+    content: "🎀";
+    position: absolute;
+    top: 22px;
+    left: 28px;
+    font-size: 2rem;
+    transform: rotate(-12deg);
+    pointer-events: none;
+}
+
+/* Hati dekoratif di sudut */
+#home::after {
+    content: "♡  ✧  ♡";
+    position: absolute;
+    right: 24px;
+    bottom: 22px;
+    color: #e88eb2;
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+    pointer-events: none;
+}
+
+/* Judul Home */
+#home h1 {
+    color: #c65383;
+    line-height: 1.2;
+    text-wrap: balance;
+}
+
+/* Paragraf Home */
+#home p {
+    line-height: 1.8;
+}
+
+/* Tombol Home */
+#home a {
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+#home a:hover {
+    transform: translateY(-3px);
+}
+
+/* 🌙 Night Mode */
+body.dark-mode #home {
+    background:
+        radial-gradient(ellipse at 12% 18%,
+            rgba(126, 75, 105, 0.3), transparent 32%),
+        radial-gradient(ellipse at 88% 80%,
+            rgba(100, 63, 91, 0.35), transparent 32%),
+        linear-gradient(135deg, #30232f, #402b3c, #30232f);
+
+    border-color: #76506a;
+}
+
+body.dark-mode #home h1 {
+    color: #ffc1d7;
+}
+
+body.dark-mode #home p {
+    color: #f3dce7;
+}
+
+/* 📱 Tampilan HP */
+@media (max-width: 600px) {
+    #home {
+        padding: 76px 18px 64px;
+        border-radius: 22px;
+    }
+
+    #home::before {
+        top: 14px;
+        left: 14px;
+        font-size: 1.5rem;
+    }
+
+    #home::after {
+        right: 12px;
+        bottom: 12px;
+        font-size: 1rem;
+        letter-spacing: 4px;
+    }
+}
+
+/* 🎀 Tengahkan tombol Home */
+
+#home .hero-buttons,
+#home .home-buttons,
+#home .hero-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    width: 100%;
+    margin: 24px auto 0;
+}
+
+/* Jika tombol berada langsung di dalam container Home */
+#home .hero-content,
+#home .home-content {
+    text-align: center;
+}
+
+#home .hero-buttons a,
+#home .home-buttons a,
+#home .hero-btns a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 📱 Tampilan HP */
+@media (max-width: 600px) {
+    #home .hero-buttons,
+    #home .home-buttons,
+    #home .hero-btns {
+        justify-content: center;
+        gap: 12px;
+    }
+}
+
+/* ♡ SHERA'S WORLD — BEAUTIFUL HOME TYPOGRAPHY ♡ */
+
+/* Area Home */
+#home {
+    text-align: center;
+}
+
+/* Tulisan kecil di atas judul */
+#home .welcome-eyebrow {
+    color: #c56b91;
+    font-family: Georgia, serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+/* Judul utama */
+#home h1 {
+    max-width: 900px;
+    margin: 0 auto 22px;
+
+    color: #c65383;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    text-align: center;
+    text-wrap: balance;
+
+    text-shadow: 2px 3px 0 #ffe0ec;
+}
+
+/* Teks deskripsi */
+#home .welcome-description {
+    max-width: 580px;
+    margin: 0 auto 26px;
+
+    color: #87536d;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 400;
+    line-height: 1.9;
+    letter-spacing: 0.3px;
+    text-align: center;
+}
+
+/* Semua paragraf Home selain eyebrow dan deskripsi */
+#home p {
+    text-align: center;
+}
+
+/* Tombol Explore More dan Get in Touch */
+#home .hero-buttons a,
+#home .home-buttons a,
+#home .hero-btns a {
+    font-family: inherit;
+    font-size: 0.98rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+
+    padding: 13px 25px;
+    border-radius: 999px;
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+#home .hero-buttons a:hover,
+#home .home-buttons a:hover,
+#home .hero-btns a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(198, 83, 131, 0.2);
+}
+
+/* 🌙 Night Mode */
+body.dark-mode #home .welcome-eyebrow {
+    color: #f2a6c6;
+}
+
+body.dark-mode #home h1 {
+    color: #ffc1d7;
+    text-shadow: 2px 3px 0 rgba(120, 65, 95, 0.5);
+}
+
+body.dark-mode #home .welcome-description {
+    color: #f3dce7;
+}
+
+/* 📱 Typography untuk HP */
+@media (max-width: 600px) {
+    #home .welcome-eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+    }
+
+    #home h1 {
+        font-size: clamp(2rem, 8vw, 2.7rem);
+        line-height: 1.25;
+        letter-spacing: -0.5px;
+        margin-bottom: 16px;
+    }
+
+    #home .welcome-description {
+        font-size: 0.98rem;
+        line-height: 1.8;
+        margin-bottom: 22px;
+    }
+
+    #home .hero-buttons a,
+    #home .home-buttons a,
+    #home .hero-btns a {
+        font-size: 0.9rem;
+        padding: 12px 20px;
+    }
+}
+
+/* 🎀 Shera's World — dreamy pink background */
+
+#home {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 240, 247, 0.18),
+            rgba(255, 240, 247, 0.18)
+        ),
+        url("../images/welcome-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 28px;
+    min-height: 500px;
+    padding: 70px 24px;
+
+    text-align: center;
+}
+
+/* Pastikan konten Home berada di tengah */
+#home .hero-content,
+#home .home-content,
+#home .welcome-content {
+    position: relative;
+    z-index: 1;
+    margin-inline: auto;
+    text-align: center;
+}
+
+/* 📱 Tampilan HP */
+@media (max-width: 600px) {
+    #home {
+        min-height: 420px;
+        padding: 55px 16px;
+        background-position: center;
+        border-radius: 22px;
+    }
+}
+
+/* 🎀 SHERA'S WORLD — KAWAII BACKGROUND */
+
+#home {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 245, 250, 0.12),
+            rgba(255, 245, 250, 0.12)
+        ),
+        url("../images/welcome-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 28px;
+}
+
+/* Pastikan teks dan tombol berada di atas background */
+#home > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* 🌙 Night Mode */
+body.dark-mode #home {
+    background-image:
+        linear-gradient(
+            rgba(45, 29, 43, 0.48),
+            rgba(45, 29, 43, 0.48)
+        ),
+        url("../images/welcome-bg.png") ;
+}
+
+/* 📱 Tampilan HP */
+@media (max-width: 600px) {
+    #home {
+        background-position: center;
+        background-size: cover;
+        border-radius: 22px;
+    }
+}
+
+#home.hero {
+    background-image: url("../images/welcome-bg.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* 🎀 Background Home lebih soft */
+#home.hero {
+    background-image:
+        linear-gradient(
+            rgba(255, 245, 250, 0.35),
+            rgba(255, 245, 250, 0.35)
+        ),
+        url("../images/welcome-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 🎀 SHERA — SOFT TRANSPARENT BACKGROUND */
+#home.hero {
+    background-color: #fff5fa !important;
+    background-image:
+        linear-gradient(
+            rgba(255, 245, 250, 0.65),
+            rgba(255, 245, 250, 0.65)
+        ),
+        url("../images/welcome-bg.png") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* 🎀 Membuat kotak Home lebih compact */
+
+#home .hero-content,
+#home .home-content,
+#home .welcome-content {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 28px 24px;
+    box-sizing: border-box;
+}
+
+/* Kurangi ruang kosong di dalam Home */
+#home.hero {
+    min-height: auto;
+    padding: 55px 20px;
+    border-radius: 24px;
+}
+
+/* Judul agar tetap proporsional */
+#home h1 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+/* Deskripsi lebih rapat */
+#home p {
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+
+/* 📱 Tampilan HP */
+@media (max-width: 600px) {
+    #home.hero {
+        padding: 42px 14px;
+        border-radius: 20px;
+    }
+
+    #home .hero-content,
+    #home .home-content,
+    #home .welcome-content {
+        padding: 20px 14px;
+    }
+}
+
+/* 🌙 SHERA'S WORLD — HOME NIGHT MODE FIX */
+
+body.dark-mode #home.hero {
+    background-color: #291d2b !important;
+
+    background-image:
+        linear-gradient(
+            rgba(32, 22, 35, 0.76),
+            rgba(32, 22, 35, 0.76)
+        ),
+        url("../images/welcome-bg.png") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+    border-color: #604056;
+}
+
+/* Judul utama tetap jelas */
+body.dark-mode #home h1 {
+    color: #ffd0e2 !important;
+    text-shadow: 0 3px 12px rgba(255, 130, 180, 0.25);
+}
+
+/* Teks pendukung */
+body.dark-mode #home p {
+    color: #f3dce9 !important;
+}
+
+/* Sapaan kecil */
+body.dark-mode #home .welcome-eyebrow {
+    color: #ffb6d1 !important;
+}
+
+/* Tombol Explore More */
+body.dark-mode #home .hero-buttons a,
+body.dark-mode #home .home-buttons a,
+body.dark-mode #home .hero-btns a {
+    color: #fff4f9 !important;
+}
+
+/* Tombol Get in Touch */
+body.dark-mode #home .hero-buttons a:last-child,
+body.dark-mode #home .home-buttons a:last-child,
+body.dark-mode #home .hero-btns a:last-child {
+    background-color: #513449;
+    border-color: #c77fa2;
+    color: #fff4f9 !important;
+}
+
+/* 🌙 Pastikan dekorasi tetap terlihat */
+body.dark-mode #home {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* =================================
+   🎀 SHERA'S WORLD — ABOUT ME
+================================= */
+
+.about {
+    padding: 80px 24px;
+    color: #75445c;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-heading {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.about-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #cf7099;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.about-heading h2 {
+    margin: 0 0 12px;
+    color: #c65383;
+    font-family: Georgia, serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+}
+
+.about-heading > p {
+    margin: 0;
+    color: #986981;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* PROFIL UTAMA */
+
+.about-profile-card {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto 55px;
+    padding: 38px 30px;
+    overflow: hidden;
+
+    text-align: center;
+    background: linear-gradient(145deg, #fff8fb, #ffeaf3);
+    border: 1px solid #f5c5d9;
+    border-radius: 30px;
+    box-shadow: 0 12px 35px rgba(190, 103, 143, 0.10);
+}
+
+.about-profile {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Foto bulat: pertahankan bentuk foto di laptop dan HP */
+
+.about .about-avatar {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 22px;
+    padding: 5px;
+    box-sizing: border-box;
+
+    border: 2px solid #eaa0bd;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(190, 103, 143, 0.16);
+}
+
+.about .about-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.about-hello {
+    display: block;
+    margin-bottom: 10px;
+    color: #d65c91;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.about-profile h3 {
+    max-width: 580px;
+    margin: 0 auto 14px;
+    color: #b64778;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.about-major {
+    margin: 0 0 6px;
+    color: #d3548a;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.about-campus {
+    margin: 0;
+    color: #91647c;
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+.about-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 25px auto;
+    color: #d76e9c;
+}
+
+.about-divider span {
+    width: 90px;
+    max-width: 25%;
+    height: 1px;
+    background: #e9a2bf;
+}
+
+/* BIODATA */
+
+.about-biodata {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    text-align: left;
+}
+
+.biodata-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+    padding: 16px;
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid #f5d5e2;
+    border-radius: 17px;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.biodata-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(190, 103, 143, 0.10);
+}
+
+.biodata-icon {
+    flex-shrink: 0;
+    font-size: 1.35rem;
+}
+
+.biodata-item > div {
+    min-width: 0;
+}
+
+.biodata-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #bd7394;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.biodata-item p {
+    margin: 0;
+    color: #75445c;
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* DEKORASI */
+
+.about-decoration {
+    position: absolute;
+    pointer-events: none;
+}
+
+.about-bow {
+    top: 24px;
+    right: 25px;
+    font-size: 2rem;
+}
+
+.about-heart {
+    top: 105px;
+    right: 28px;
+    color: #e99bbc;
+    font-size: 2rem;
+}
+
+/* SUBHEADING */
+
+.about-subheading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+
+.about-subheading > span {
+    color: #d77ea3;
+    font-size: 1.2rem;
+}
+
+.about-subheading h3 {
+    margin: 0;
+    color: #bd5784;
+    font-family: Georgia, serif;
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+    line-height: 1.4;
+}
+
+/* PENDIDIKAN */
+
+.education-card {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto 52px;
+    padding: 10px 24px;
+
+    background: #fff8fb;
+    border: 1px solid #f5d1df;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(190, 103, 143, 0.07);
+}
+
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px 4px;
+}
+
+.education-item + .education-item {
+    border-top: 1px dashed #edc0d3;
+}
+
+.education-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+    background: #ffe7f0;
+    border-radius: 16px;
+    font-size: 1.4rem;
+}
+
+.education-info {
+    min-width: 0;
+}
+
+.education-period,
+.organization-period {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: #c65e8c;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.education-info h4,
+.organization-info h4 {
+    margin: 0 0 6px;
+    color: #854765;
+    font-size: 1.02rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.education-info p {
+    margin: 0;
+    color: #997188;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* ORGANISASI */
+
+.organization-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 28px;
+
+    background: linear-gradient(135deg, #fff7fb, #ffe8f1);
+    border: 1px solid #f1c2d7;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(190, 103, 143, 0.08);
+}
+
+.organization-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 58px;
+    height: 58px;
+    background: #ffdeeb;
+    border-radius: 18px;
+    font-size: 1.8rem;
+}
+
+.organization-info {
+    min-width: 0;
+    padding-right: 22px;
+}
+
+.organization-info h4 {
+    font-size: 1.15rem;
+}
+
+.organization-role {
+    display: inline-block;
+    margin: 4px 0 10px;
+    padding: 7px 12px;
+
+    color: #b94e7e;
+    background: #ffe0ec;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.organization-info p {
+    margin: 0;
+    color: #91647c;
+    font-size: 0.94rem;
+    line-height: 1.8;
+}
+
+.organization-bow {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 1.3rem;
+}
+
+/* 🌙 NIGHT MODE */
+
+body.dark-mode .about {
+    color: #f3dce8;
+}
+
+body.dark-mode .about-heading h2,
+body.dark-mode .about-subheading h3 {
+    color: #ffc0d9;
+}
+
+body.dark-mode .about-eyebrow,
+body.dark-mode .about-heading > p {
+    color: #e5a4c2;
+}
+
+body.dark-mode .about-profile-card,
+body.dark-mode .education-card,
+body.dark-mode .organization-card {
+    background: linear-gradient(145deg, #352635, #2c202e);
+    border-color: #634057;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .about-profile h3,
+body.dark-mode .education-info h4,
+body.dark-mode .organization-info h4 {
+    color: #ffd3e4;
+}
+
+body.dark-mode .about-hello,
+body.dark-mode .about-major,
+body.dark-mode .education-period,
+body.dark-mode .organization-period {
+    color: #f2a6c6;
+}
+
+body.dark-mode .about-campus,
+body.dark-mode .education-info p,
+body.dark-mode .organization-info p {
+    color: #e6cbd9;
+}
+
+body.dark-mode .biodata-item {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: #604056;
+}
+
+body.dark-mode .biodata-label {
+    color: #e6a4c1;
+}
+
+body.dark-mode .biodata-item p {
+    color: #f5e4ec;
+}
+
+body.dark-mode .education-item + .education-item {
+    border-color: #634057;
+}
+
+body.dark-mode .education-icon,
+body.dark-mode .organization-icon {
+    background: #513449;
+}
+
+body.dark-mode .organization-role {
+    color: #ffd5e5;
+    background: #513449;
+}
+
+body.dark-mode .about-divider span {
+    background: #80506b;
+}
+
+body.dark-mode .about .about-avatar {
+    border-color: #93617e;
+}
+
+/* 📱 RESPONSIVE */
+
+@media (max-width: 600px) {
+    .about {
+        padding: 48px 15px;
+    }
+
+    .about-heading {
+        margin-bottom: 28px;
+    }
+
+    .about-profile-card {
+        padding: 28px 16px;
+        margin-bottom: 42px;
+        border-radius: 24px;
+    }
+
+    .about .about-avatar {
+        width: 140px;
+        height: 140px;
+    }
+
+    .about-biodata {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .biodata-item {
+        padding: 14px;
+    }
+
+    .about-bow {
+        top: 14px;
+        right: 14px;
+        font-size: 1.5rem;
+    }
+
+    .about-heart {
+        top: 72px;
+        right: 14px;
+        font-size: 1.4rem;
+    }
+
+    .education-card {
+        padding: 5px 16px;
+        border-radius: 20px;
+        margin-bottom: 40px;
+    }
+
+    .education-item {
+        gap: 13px;
+        padding: 19px 0;
+    }
+
+    .education-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 13px;
+        font-size: 1.2rem;
+    }
+
+    .education-info h4 {
+        font-size: 0.94rem;
+    }
+
+    .organization-card {
+        gap: 13px;
+        padding: 22px 16px;
+        border-radius: 20px;
+    }
+
+    .organization-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        font-size: 1.4rem;
+    }
+
+    .organization-info {
+        padding-right: 0;
+    }
+
+    .organization-info h4 {
+        font-size: 1rem;
+    }
+
+    .organization-bow {
+        top: 10px;
+        right: 10px;
+        font-size: 1rem;
+    }
+
+    .about-subheading {
+        gap: 9px;
+    }
+}
+
+/* 🎀 Biodata satu baris di laptop */
+.about .about-biodata {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100%;
+}
+
+.about .biodata-item {
+    min-width: 0;
+    padding: 12px 10px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 14px;
+}
+
+.about .biodata-icon {
+    font-size: 1.2rem;
+}
+
+.about .biodata-item p {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* 📱 HP: tetap rapi tanpa membuat teks terlalu sempit */
+@media (max-width: 600px) {
+    .about .about-biodata {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.about .about-description {
+    max-width: 520px;
+    margin: 14px auto 0;
+    color: #91647c;
+    font-size: 0.95rem;
+    line-height: 1.9;
+    text-align: center;
+}
+
+body.dark-mode .about .about-description {
+    color: #e6cbd9;
+}
+
+@media (max-width: 600px) {
+    .about .about-description {
+        font-size: 0.88rem;
+        line-height: 1.8;
+    }
+}
+
+/* 🎀 Informasi pribadi di bawah nama */
+
+.about .about-personal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.about .about-personal-info p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.about .about-personal-info .about-major {
+    color: #d3548a;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.about .about-personal-info .about-campus {
+    color: #91647c;
+    font-size: 0.96rem;
+}
+
+.about .about-personal-info .about-nim {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 6px 15px;
+    color: #b64778;
+    background: #ffe5ef;
+    border: 1px solid #f4c5d8;
+    border-radius: 30px;
+    font-size: 0.86rem;
+    font-weight: 600;
+}
+
+/* Deskripsi tetap terpusat */
+.about .about-description {
+    max-width: 520px;
+    margin: 18px auto 0;
+    text-align: center;
+    line-height: 1.9;
+}
+
+/* 🌙 Night Mode */
+body.dark-mode .about .about-personal-info .about-major {
+    color: #f2a6c6;
+}
+
+body.dark-mode .about .about-personal-info .about-campus {
+    color: #e6cbd9;
+}
+
+body.dark-mode .about .about-personal-info .about-nim {
+    color: #ffd5e5;
+    background: #513449;
+    border-color: #80506b;
+}
+
+/* 📱 Tampilan HP */
+@media (max-width: 600px) {
+    .about .about-personal-info {
+        gap: 5px;
+    }
+
+    .about .about-personal-info .about-major {
+        font-size: 0.95rem;
+    }
+
+    .about .about-personal-info .about-campus {
+        font-size: 0.88rem;
+    }
+
+    .about .about-description {
+        margin-top: 14px;
+        font-size: 0.88rem;
+    }
+}
+.about .about-avatar {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.about .about-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 50%;
+}
+
+/* =====================================
+   🎀 SHERA'S WORLD — ABOUT ME REDESIGN
+===================================== */
+
+.about {
+    padding: 90px 24px;
+    background:
+        radial-gradient(ellipse at top left,
+            rgba(255, 215, 231, 0.34), transparent 45%),
+        var(--background-color, #fff8fb);
+}
+
+.about .about-container {
+    width: min(100%, 1050px);
+    margin: 0 auto;
+}
+
+.about .about-heading {
+    margin-bottom: 42px;
+    text-align: center;
+}
+
+.about .about-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #d76b98;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.about .about-heading h2 {
+    margin: 0 0 12px;
+    color: #c65383;
+    font-size: clamp(2.1rem, 5vw, 3.2rem);
+}
+
+.about .about-heading > p {
+    color: #91647c;
+    line-height: 1.8;
+}
+
+/* Kartu profil */
+.about .about-profile-card {
+    position: relative;
+    overflow: hidden;
+    width: min(100%, 850px);
+    margin: 0 auto 65px;
+    padding: 48px 35px;
+    background: linear-gradient(145deg, #fffafd, #ffedf4);
+    border: 1px solid #f5c5d8;
+    border-radius: 30px;
+    box-shadow: 0 18px 45px rgba(190, 103, 143, 0.10);
+}
+
+.about .about-profile {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Foto berbentuk lingkaran */
+.about .about-avatar {
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 24px;
+    padding: 5px;
+    overflow: hidden;
+    border: 2px solid #e99abb;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 0 7px #ffe4ef, 0 12px 28px #d78aaa30;
+    box-sizing: border-box;
+}
+
+.about .about-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.about .about-hello {
+    display: block;
+    margin-bottom: 12px;
+    color: #d6538b;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.about .about-profile h3 {
+    max-width: 700px;
+    margin: 0 auto 16px;
+    color: #b64778;
+    font-size: clamp(1.5rem, 3.5vw, 2.35rem);
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.about .about-personal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    margin-top: 12px;
+}
+
+.about .about-personal-info p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.about .about-major {
+    color: #d6538b;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.about .about-campus {
+    color: #91647c;
+}
+
+.about .about-nim {
+    margin-top: 5px !important;
+    padding: 7px 16px;
+    color: #b64778;
+    background: #ffe4ef;
+    border: 1px solid #f4c3d7;
+    border-radius: 30px;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.about .about-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 28px auto 22px;
+    color: #d6538b;
+}
+
+.about .about-divider span {
+    width: 70px;
+    height: 1px;
+    background: #eda8c3;
+}
+
+.about .about-description {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #91647c;
+    font-size: 0.98rem;
+    line-height: 1.95;
+}
+
+.about .about-bow,
+.about .about-heart {
+    position: absolute;
+    z-index: 2;
+    color: #d6538b;
+    font-size: 2rem;
+}
+
+.about .about-bow {
+    top: 20px;
+    right: 24px;
+}
+
+.about .about-heart {
+    bottom: 22px;
+    left: 25px;
+    font-size: 1.7rem;
+}
+
+/* Judul pendidikan dan organisasi */
+.about .about-subheading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 45px 0 25px;
+    text-align: center;
+}
+
+.about .about-subheading h3 {
+    margin: 0;
+    color: #b64778;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+}
+
+.about .about-subheading > span {
+    color: #df8db0;
+    font-size: 1.3rem;
+}
+
+/* Pendidikan */
+.about .education-card {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.about .education-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 22px;
+    background: #fffafd;
+    border: 1px solid #f4d2e0;
+    border-radius: 20px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about .education-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px #ce7fa01c;
+}
+
+.about .education-icon,
+.about .organization-icon {
+    display: grid;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    background: #ffe8f1;
+    border-radius: 14px;
+    font-size: 1.35rem;
+}
+
+.about .education-info {
+    min-width: 0;
+}
+
+.about .education-period,
+.about .organization-period {
+    color: #d6538b;
+    font-size: 0.83rem;
+    font-weight: 700;
+}
+
+.about .education-info h4,
+.about .organization-info h4 {
+    margin: 7px 0;
+    color: #a84975;
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.about .education-info p,
+.about .organization-info p {
+    margin: 0;
+    color: #91647c;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+/* Pengalaman organisasi */
+.about .organization-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 26px;
+    background: linear-gradient(135deg, #fffafd, #ffedf4);
+    border: 1px solid #f4c8da;
+    border-radius: 22px;
+    box-shadow: 0 10px 28px #ce7fa015;
+}
+
+.about .organization-info {
+    min-width: 0;
+    padding-right: 22px;
+}
+
+.about .organization-role {
+    display: inline-block;
+    margin: 4px 0 12px;
+    padding: 6px 12px;
+    color: #b64778;
+    background: #ffe2ed;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.about .organization-bow {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    font-size: 1.4rem;
+}
+
+.about .about-closing {
+    margin: 38px 0 0;
+    color: #c65383;
+    font-family: Georgia, serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    text-align: center;
+}
+
+/* 🌙 Night Mode */
+body.dark-mode .about {
+    background:
+        radial-gradient(ellipse at top left,
+            #56374a55, transparent 48%),
+        #211923;
+}
+
+body.dark-mode .about .about-profile-card,
+body.dark-mode .about .organization-card {
+    background: linear-gradient(145deg, #352532, #2a202d);
+    border-color: #69465b;
+    box-shadow: 0 18px 40px #00000020;
+}
+
+body.dark-mode .about .about-heading h2,
+body.dark-mode .about .about-subheading h3,
+body.dark-mode .about .about-profile h3,
+body.dark-mode .about .education-info h4,
+body.dark-mode .about .organization-info h4 {
+    color: #f1b0cc;
+}
+
+body.dark-mode .about .about-heading > p,
+body.dark-mode .about .about-campus,
+body.dark-mode .about .about-description,
+body.dark-mode .about .education-info p,
+body.dark-mode .about .organization-info p {
+    color: #e2c8d9;
+}
+
+body.dark-mode .about .education-item {
+    background: #302431;
+    border-color: #604257;
+}
+
+body.dark-mode .about .about-nim,
+body.dark-mode .about .organization-role {
+    color: #ffd8e8;
+    background: #513449;
+    border-color: #80506b;
+}
+
+body.dark-mode .about .about-avatar {
+    background: #302431;
+    border-color: #c77fa1;
+    box-shadow: 0 0 0 7px #513449, 0 12px 28px #00000030;
+}
+
+body.dark-mode .about .education-icon,
+body.dark-mode .about .organization-icon {
+    background: #513449;
+}
+
+body.dark-mode .about .about-closing {
+    color: #f1b0cc;
+}
+
+/* 📱 Tablet dan HP */
+@media (max-width: 700px) {
+    .about {
+        padding: 65px 16px;
+    }
+
+    .about .about-profile-card {
+        padding: 38px 20px;
+        margin-bottom: 48px;
+        border-radius: 24px;
+    }
+
+    .about .about-avatar {
+        width: 145px;
+        height: 145px;
+    }
+
+    .about .education-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .about .education-item {
+        padding: 18px;
+    }
+
+    .about .organization-card {
+        padding: 22px 18px;
+        gap: 12px;
+    }
+
+    .about .about-bow {
+        top: 12px;
+        right: 14px;
+        font-size: 1.5rem;
+    }
+
+    .about .about-heart {
+        bottom: 12px;
+        left: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .about .about-profile-card {
+        padding: 32px 15px;
+    }
+
+    .about .about-avatar {
+        width: 125px;
+        height: 125px;
+    }
+
+    .about .organization-icon {
+        flex-basis: 36px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .about .organization-info h4 {
+        font-size: 0.92rem;
+    }
+}
+
+
+.about .about-profile h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+    max-width: 650px;
+    margin: 0 auto 14px;
+    color: #b6537e;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+body.dark-mode .about .about-profile h3 {
+    color: #f3b8d0;
+}
+
+@media (max-width: 600px) {
+    .about .about-profile h3 {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+}
+
+
+/* Hilangkan dekorasi hati di atas foto About Me */
+.about .about-heart {
+    display: none !important;
+}
+
+
+/* 🎀 Memberi jarak antara NIM dan deskripsi */
+.about .about-nim {
+    margin-bottom: 24px;
+}
+
+.about .about-description {
+    margin-top: 24px;
+    line-height: 1.8;
+}
+
+/* 🎀 Rapikan jarak judul My Education */
+.about .education-section {
+    margin-top: 45px;
+    padding-top: 0;
+}
+
+.about .education-section h2 {
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+/* 🎀 Perbesar kotak luar riwayat pendidikan */
+.about .education-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px 30px;
+    box-sizing: border-box;
+}
+
+/* 🎀 Naikkan posisi My Education */
+.about .about-subheading {
+    margin-top: 0 !important;
+    margin-bottom: 30px !important;
+    padding-top: 0 !important;
+    transform: translateY(-15px);
+}
+
+/* 🎀 Perbesar kotak luar pendidikan */
+.about .education-card {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 28px 36px !important;
+    box-sizing: border-box;
+}
+
+/* 🎀 SHERA'S WORLD — Soft Coquette Details */
+
+/* Kartu dengan bayangan pink lembut */
+#skills .skill-card,
+#achievements .achievement-card,
+#projects .project-card,
+#contact .contact-card,
+.about .education-card {
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(210, 133, 170, 0.12);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Efek saat kursor diarahkan ke kartu */
+#skills .skill-card:hover,
+#achievements .achievement-card:hover,
+#projects .project-card:hover,
+#contact .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(210, 133, 170, 0.2);
+}
+
+/* Judul section lebih manis */
+.section-heading h2,
+#projects > h2 {
+    letter-spacing: 0.3px;
+}
+
+/* Label kecil dengan nuansa coquette */
+.section-label {
+    letter-spacing: 1.5px;
+}
+
+/* 🌙 Tetap nyaman dalam Night Mode */
+body.dark-mode #skills .skill-card,
+body.dark-mode #achievements .achievement-card,
+body.dark-mode #projects .project-card,
+body.dark-mode #contact .contact-card,
+body.dark-mode .about .education-card {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+body.dark-mode #skills .skill-card:hover,
+body.dark-mode #achievements .achievement-card:hover,
+body.dark-mode #projects .project-card:hover,
+body.dark-mode #contact .contact-card:hover {
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
+}
+
+/* 📱 HP: hindari efek hover yang mengganggu */
+@media (max-width: 768px) {
+    #skills .skill-card:hover,
+    #achievements .achievement-card:hover,
+    #projects .project-card:hover,
+    #contact .contact-card:hover {
+        transform: none;
+    }
+}
+
+/* 🎀 SHERA'S WORLD — Coquette Navbar */
+
+/* Navbar lebih lembut dan elegan */
+.navbar {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 4px 20px rgba(210, 133, 170, 0.10);
+    transition: background-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Link navigasi */
+#nav-links a {
+    position: relative;
+    transition: color 0.25s ease,
+                background-color 0.25s ease;
+}
+
+/* Efek garis pink saat kursor diarahkan */
+#nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 15%;
+    bottom: 4px;
+    width: 0;
+    height: 2px;
+    border-radius: 10px;
+    background: #d889ab;
+    transition: width 0.25s ease;
+}
+
+#nav-links a:hover::after {
+    width: 70%;
+}
+
+/* 🌙 Night Mode */
+body.dark-mode .navbar {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+}
+
+body.dark-mode #nav-links a::after {
+    background: #f3b8d0;
+}
+
+/* 🎀 Shera's World — Mobile Beauty Fix */
+@media (max-width: 600px) {
+
+    /* Ruang antarbagian lebih nyaman */
+    main > section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Kartu proyek dan kontak lebih pas di layar HP */
+    .project-card,
+    .contact-card,
+    .education-card {
+        max-width: 100%;
+        min-width: 0;
+        border-radius: 22px;
+    }
+
+    /* Teks panjang tidak melebar keluar layar */
+    .project-info,
+    .contact-card,
+    .contact-item {
+        overflow-wrap: anywhere;
+    }
+
+    /* Link kontak lebih nyaman disentuh */
+    .contact-item {
+        min-width: 0;
+        padding: 14px;
+    }
+
+    /* Footer lebih rapi di layar kecil */
+    .footer {
+        padding: 22px 16px;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .footer p {
+        line-height: 1.7;
+    }
+}
+
+/* 🎀 Pastikan ikon hamburger terlihat */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        visibility: visible;
+        position: relative;
+        z-index: 1002;
+    }
+}
+
+/* 🎀 Pastikan navbar dan hamburger di atas background Home */
+header {
+    position: relative;
+    z-index: 2000;
+}
+
+.navbar {
+    position: relative;
+    z-index: 2001;
+}
+
+/* Menu dropdown selalu berada di lapisan terdepan */
+@media (max-width: 768px) {
+    .nav-links {
+        z-index: 2002 !important;
+    }
+
+    .nav-links.active {
+        position: absolute;
+    }
+}
+
+/* 🎀 FINAL POLISH — SHERA'S WORLD ON MOBILE */
+@media (max-width: 600px) {
+
+    /* Jarak antarbagian lebih konsisten */
+    main > section {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 32px 16px;
+    }
+
+    /* Home: teks lebih nyaman dibaca */
+    .hero {
+        margin: 8px 4px;
+        padding: 32px 18px;
+        border-radius: 24px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .hero-description,
+    .projects-intro {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    /* Grid kartu tersusun satu kolom */
+    .skills-grid,
+    .project-grid,
+    .achievement-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    /* Semua kartu tidak melewati lebar layar */
+    .skill-card,
+    .achievement-card,
+    .project-card,
+    .contact-card,
+    .education-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        border-radius: 20px;
+    }
+
+    /* Teks panjang tetap berada di dalam kartu */
+    .skill-card,
+    .achievement-card,
+    .project-info,
+    .contact-card,
+    .education-item {
+        overflow-wrap: anywhere;
+    }
+
+    /* Gambar tetap proporsional */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Tombol dan link mudah disentuh */
+    .contact-item {
+        min-height: 44px;
+    }
+
+    /* Footer lebih manis dan rapi */
+    .footer {
+        padding: 22px 16px;
+        text-align: center;
+    }
+
+    .footer p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
+
+/* 🎀 MOBILE LAYOUT — perapian utama */
+@media (max-width: 600px) {
+
+    /* Ukuran section konsisten */
+    main > section {
+        box-sizing: border-box;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 30px 16px;
+    }
+
+    /* Home: hilangkan ruang kosong berlebihan */
+    .hero {
+        box-sizing: border-box;
+        min-height: 0;
+        height: auto;
+        margin: 8px 0 16px;
+        padding: 28px 16px;
+        gap: 18px;
+    }
+
+    .hero-art {
+        min-height: 0;
+        height: auto;
+        padding: 8px 0;
+    }
+
+    /* About: hindari kartu yang terlalu rapat */
+    .about .about-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 18px 12px;
+        box-sizing: border-box;
+    }
+
+    .about .about-profile {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    /* Kartu-kartu lain tetap di dalam section */
+    .skill-card,
+    .achievement-card,
+    .project-card,
+    .contact-card,
+    .education-card {
+        box-sizing: border-box;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    /* Tombol kembali ke atas tidak terlalu besar */
+    #back-to-top {
+        width: 42px;
+        height: 42px;
+        right: 12px;
+        bottom: 12px;
+        font-size: 22px;
+    }
+}
+
+
+/* 🎀 Rapikan posisi jerapah tanpa mengecilkannya */
+@media (max-width: 600px) {
+    .hero {
+        gap: 12px;
+    }
+
+    .hero-art {
+        min-height: 290px;
+        height: auto;
+        margin-top: 8px;
+        overflow: visible;
+    }
+
+    .hero-art img,
+    .hero-image img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+/* 🎀 Rapikan bingkai antarbagian di HP */
+@media (max-width: 600px) {
+
+    /* Bingkai utama setiap section */
+    main > section {
+        border-radius: 24px;
+        border-width: 1px;
+    }
+
+    /* Home dan About tidak terlalu menempel */
+    main > section + section {
+        margin-top: 16px;
+    }
+
+    /* Kartu di dalam About */
+    .about .about-card,
+    .about .education-card {
+        border-radius: 20px;
+        padding: 16px;
+        box-shadow: 0 4px 14px rgba(210, 133, 170, 0.08);
+    }
+
+    /* Bingkai kartu profil */
+    .about .about-profile {
+        border-radius: 18px;
+        padding: 14px;
+    }
+
+    /* Bingkai kartu lain konsisten */
+    .skill-card,
+    .achievement-card,
+    .project-card,
+    .contact-card {
+        border-radius: 20px;
+    }
+}
+
+/* 🌙 Bingkai tetap lembut di Night Mode */
+@media (max-width: 600px) {
+    body.dark-mode .about .about-card,
+    body.dark-mode .about .education-card {
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* 🎀 Fix kotak Home agar pas di layar HP */
+@media (max-width: 600px) {
+    #home.hero {
+        box-sizing: border-box;
+        width: auto;
+        max-width: calc(100% - 20px);
+        margin: 12px auto;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 24px;
+    }
+
+    #home .hero-content,
+    #home .hero-art {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    #home .hero-giraffe {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* 🎀 Fix kotak About Me di HP */
+@media (max-width: 600px) {
+    #about.about {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 12px;
+        padding-right: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    #about .about-container {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #about .about-profile-card,
+    #about .about-profile,
+    #about .education-card,
+    #about .organization-card {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #about .about-profile {
+        overflow-wrap: anywhere;
+    }
+
+    #about .about-avatar img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* 🎀 Fix My Projects dan Contact di HP */
+@media (max-width: 600px) {
+    #projects,
+    #contact {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    #projects .project-card,
+    #contact .contact-card {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #projects *,
+    #contact * {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    #projects img,
+    #contact img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* 🦒 Geser jerapah sedikit ke kiri */
+@media (min-width: 601px) {
+    .hero-art {
+        transform: translateX(-35px);
+    }
+}
+
+/* 🎀 Tengahkan tulisan penutup */
+.about-closing {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.about-closing {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+/* 🎀 Posisikan tulisan penutup tepat di tengah */
+#about .about-container .about-closing {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0;
+    padding-right: 0;
+    position: static;
+    transform: none;
+}
+
+/* 🎀 Center tulisan khusus tampilan laptop */
+@media (min-width: 601px) {
+    #about .about-closing {
+        text-align: center !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        transform: none !important;
+        position: static !important;
+    }
+}
+
+/* 🎀 Naikkan kotak What I Can Do di laptop */
+@media (min-width: 601px) {
+    .skills-card {
+        transform: translateY(-25px);
+    }
+}
+
+/* 🎀 Naikkan bagian What I Can Do di laptop */
+@media (min-width: 601px) {
+    #skills {
+        margin-top: -0px !important;
+        padding-top: 0 !important;
+    }
+}
+
+/* 🎀 Tambah jarak di bawah kotak What I Can Do */
+@media (min-width: 601px) {
+    #skills {
+        padding-bottom: 25px !important;
+    }
+}
+
+/* 🎀 Atur jarak kotak What I Can Do dari garis putus-putus */
+@media (min-width: 601px) {
+    #skills {
+        margin-top: -5px !important;
+        padding-top: 35px !important;
+    }
+}
+
+/* 🎀 Rapikan jarak What I Can Do ke My Achievements */
+@media (min-width: 601px) {
+    #achievements {
+        padding-top: 35px !important;
+    }
+
+    #achievements::before {
+        height: 35px !important;
+        margin-bottom: 25px !important;
+    }
+}
+
+/* 🎀 Tampilan sertifikat di My Achievements */
+#achievements .certificate-image {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 16px auto;
+    border-radius: 12px;
+    border: 1px solid #f0bfd2;
+    box-shadow: 0 5px 16px rgba(190, 104, 145, 0.12);
+    cursor: pointer;
+}
+/* Rapatkan jarak Achievements → Projects */
+#achievements {
+    padding-bottom: 20px;
+}
+
+#achievements .achievement-footnote {
+    margin-bottom: 0;
+}
+
+/* Kotak Projects: sejajar dengan section lain dan lebih rapat */
+#projects.projects {
+    width: min(86%, 1100px);
+    margin: 0 auto 50px;
+    padding: 50px 6% 45px;
+}
+
+@media (max-width: 600px) {
+    #projects.projects {
+        width: 92%;
+        margin: 0 auto 35px;
+        padding: 32px 16px;
+    }
+}
+@media (max-width: 600px) {
+  /* section Organization Experience */
+  .org-section,
+  #organization {
+    padding: 24px 16px;
+  }
+
+  /* judul */
+  .org-section .section-title {
+    margin: 0 0 12px;
+  }
+
+  /* jarak antar kartu / isi section */
+  .org-list,
+  .org-section .cards {
+    gap: 12px;
+    margin-top: 0;
+  }
+
+  /* kartu */
+  .org-card {
+    margin: 0 0 12px;
+  }
+
+  /* kutipan di bawah */
+  .quote,
+  .org-section blockquote {
+    margin: 16px 0 0;
+  }
+}
+
+/* 📱 Perkecil jarak judul My Education di HP */
+@media (max-width: 600px) {
+    .about-education h2 {
+        margin-bottom: 20px !important;
+    }
+
+    .about-education {
+        gap: 12px !important;
+        padding-top: 10px !important;
+    }
+}
+
+/* Khusus HP — rapatkan My Education */
+@media screen and (max-width: 600px) {
+    #about .about-subheading {
+        margin-bottom: 12px !important;
+    }
+
+    #about .education-card {
+        margin-top: 0 !important;
+    }
+}
+
+/* 📱 Naikkan posisi My Achievement khusus HP */
+@media screen and (max-width: 600px) {
+    #achievements {
+        margin-top: -20px !important;
+    }
+}
+@keyframes giraffeFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.giraffe {
+  animation: giraffeFloat 3s ease-in-out infinite;
+}
+/* Animasi jerapah khusus laptop */
+@media (min-width: 601px) {
+  .giraffe {
+    animation: giraffeFloatLaptop 3s ease-in-out infinite;
+  }
+}
+
+@keyframes giraffeFloatLaptop {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+/* 📱 Lebar kotak Home & About di HP (lebih besar, tidak mentok layar) */
+@media (max-width: 768px) {
+    #home.hero,
+    section#about.about {
+        width: auto;
+        max-width: none;
+        margin-left: 3%;
+        margin-right: 3%;
+        box-sizing: border-box;
+    }
+}
+/* Pembatas What I Can Do: tidak mentok layar */
+section#skills {
+    border-top: none;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+section#skills::before {
+    content: "";
+    display: block;
+    width: 84%;
+    max-width: 700px;
+    margin: 0 auto 28px;
+    border-top: 2px dashed #f4c5d5;
+}
+
+body.dark-mode section#skills::before {
+    border-top-color: #624458;
+}
+
+/* 📱 Jarak tepi di HP */
+@media (max-width: 768px) {
+    section#skills {
+        margin-left: 3%;
+        margin-right: 3%;
+        box-sizing: border-box;
+    }
+
+    section#skills::before {
+        width: 88%;
+    }
+}
+/* Pembatas footer: tidak mentok layar */
+.footer {
+    border-top: none;
+    position: relative;
+    margin-top: 30px;
+    padding-top: 36px;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 84%;
+    max-width: 700px;
+    border-top: 2px dashed #f0bfd1;
+}
+
+body.dark-mode .footer::before {
+    border-top-color: #72536d;
+}
+
+/* 📱 Kotak Contact sejajar dengan kotak lain, tidak mentok layar */
+@media (max-width: 768px) {
+    section#contact.contact {
+        width: auto;
+        max-width: none;
+        margin-left: 3%;
+        margin-right: 3%;
+        box-sizing: border-box;
+    }
+
+    .footer::before {
+        width: 88%;
+    }
+}
+/* 📱 What I Can Do: lebar mengikuti sisa ruang, tidak melewati layar */
+@media (max-width: 768px) {
+    section#skills {
+        width: auto;
+        max-width: none;
+        margin-left: 3%;
+        margin-right: 3%;
+        padding-left: 16px;
+        padding-right: 16px;
+        box-sizing: border-box;
+    }
+}
+/* 📱 Menu dropdown keluar dari sisi kiri, di bawah hamburger */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        left: 0;
+        right: auto;
+        top: calc(100% + 10px);
+        width: 220px;
+    }
+}
+/* 🎀 Tombol kembali ke atas — versi cantik */
+#back-to-top {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    background: linear-gradient(145deg, #f7a8c8, #de6a9a);
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1000;
+
+    box-shadow:
+        0 0 0 5px rgba(255, 214, 232, 0.55),
+        0 8px 20px rgba(214, 104, 150, 0.35),
+        inset 0 2px 4px rgba(255, 255, 255, 0.45);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+    animation: topBtnPop 0.35s ease;
+}
+
+#back-to-top.visible {
+    display: flex;
+}
+
+/* Kilau kecil di sudut */
+#back-to-top::after {
+    content: "✦";
+    position: absolute;
+    top: -6px;
+    right: -4px;
+    color: #ffd6e8;
+    font-size: 13px;
+    text-shadow: 0 0 6px rgba(255, 160, 200, 0.8);
+    pointer-events: none;
+}
+
+/* Efek saat disentuh */
+#back-to-top:hover {
+    transform: translateY(-5px) scale(1.06);
+    background: linear-gradient(145deg, #fbb5d1, #e5588e);
+    box-shadow:
+        0 0 0 7px rgba(255, 214, 232, 0.6),
+        0 14px 28px rgba(214, 104, 150, 0.45),
+        inset 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+#back-to-top:active {
+    transform: translateY(-1px) scale(0.97);
+}
+
+#back-to-top:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
+@keyframes topBtnPop {
+    from {
+        opacity: 0;
+        transform: translateY(14px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* 🌙 Night Mode */
+body.dark-mode #back-to-top {
+    background: linear-gradient(145deg, #d98bb0, #a84e78);
+    border-color: rgba(255, 225, 238, 0.55);
+    box-shadow:
+        0 0 0 5px rgba(150, 90, 125, 0.35),
+        0 8px 20px rgba(0, 0, 0, 0.4),
+        inset 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode #back-to-top:hover {
+    background: linear-gradient(145deg, #e6a0c0, #bd5d8a);
+}
+
+/* 📱 Ukuran di HP */
+@media (max-width: 600px) {
+    #back-to-top {
+        width: 44px;
+        height: 44px;
+        right: 14px;
+        bottom: 14px;
+        font-size: 20px;
+        box-shadow:
+            0 0 0 4px rgba(255, 214, 232, 0.55),
+            0 6px 16px rgba(214, 104, 150, 0.35),
+            inset 0 2px 4px rgba(255, 255, 255, 0.45);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #back-to-top {
+        animation: none;
+        transition: none;
+    }
+}
+/* 💻 Tombol kembali ke atas — khusus PC / laptop */
+@media (min-width: 769px) {
+    #back-to-top {
+        width: 58px;
+        height: 58px;
+        right: 36px;
+        bottom: 36px;
+        font-size: 26px;
+
+        box-shadow:
+            0 0 0 6px rgba(255, 214, 232, 0.55),
+            0 10px 26px rgba(214, 104, 150, 0.38),
+            inset 0 2px 5px rgba(255, 255, 255, 0.45);
+    }
+
+    #back-to-top::after {
+        top: -8px;
+        right: -6px;
+        font-size: 16px;
+    }
+
+    /* Label muncul di sebelah kiri tombol saat kursor diarahkan */
+    #back-to-top::before {
+        content: "Back to top ♡";
+        position: absolute;
+        right: calc(100% + 14px);
+        top: 50%;
+        transform: translateY(-50%) translateX(8px);
+        padding: 7px 14px;
+        border: 1px solid #f4c5d8;
+        border-radius: 999px;
+        background: #fff5fa;
+        color: #b64778;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        white-space: nowrap;
+        box-shadow: 0 6px 16px rgba(214, 104, 150, 0.18);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    #back-to-top:hover::before {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    #back-to-top:hover {
+        transform: translateY(-6px) scale(1.08);
+    }
+
+    /* 🌙 Label saat Night Mode */
+    body.dark-mode #back-to-top::before {
+        background: #3b2938;
+        border-color: #76506a;
+        color: #ffd2e5;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    }
+}
+/* 🎀 Rapikan area Hello, lovely! → deskripsi */
+
+/* Hilangkan bingkai ganda: kartu luar saja yang punya bingkai */
+#about .about-profile-card .about-profile {
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Pembatas ♡: hapus garis ganda dari aturan lama */
+#about .about-divider::before,
+#about .about-divider::after {
+    display: none;
+}
+
+#about .about-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 70%;
+    max-width: 260px;
+    margin: 22px auto;
+    color: #d6538b;
+}
+
+#about .about-divider span {
+    flex: 1;
+    max-width: none;
+    height: 1px;
+    background: #eda8c3;
+}
+
+/* Sapaan */
+#about .about-hello {
+    display: block;
+    margin: 0 0 8px;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* Nama */
+#about .about-profile h3 {
+    margin: 0 auto 12px;
+    font-size: 1.25rem;
+    line-height: 1.45;
+    text-wrap: balance;
+}
+/* 🎀 Turunkan judul About Me dari tepi atas kotak */
+#about.about {
+    padding-top: 100px;
+}
+
+#about .about-heading {
+    margin-top: 0;
+    margin-bottom: 34px;
+}
+
+/* 📱 HP */
+@media (max-width: 600px) {
+    #about.about {
+        padding-top: 48px;
+    }
+
+    #about .about-heading {
+        margin-bottom: 26px;
+    }
+}
+/* 🎀 Turunkan judul About Me — pakai pengganjal supaya tidak ditimpa */
+#about.about::before {
+    content: "";
+    display: block;
+    height: 45px;
+}
+
+#about .about-heading {
+    margin-top: 0 !important;
+    margin-bottom: 36px !important;
+}
+
+@media (max-width: 600px) {
+    #about.about::before {
+        height: 55px;
+    }
+}
+/* =================================
+   FOOTER — FULL WIDTH LINE
+================================= */
+
+.footer {
+    border-top: none;
+    position: relative;
+    margin-top: 30px;
+    padding-top: 36px;
+    width: 100%; /* Memastikan footer selebar layar */
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;         /* Mulai dari ujung paling kiri layar */
+    right: 0;        /* Sampai ke ujung paling kanan layar */
+    width: 100%;     /* Lebar penuh 100% */
+    max-width: none; /* Menghilangkan batasan maksimal */
+    border-top: 2px dashed #f0bfd1;
+    transform: none; /* Menghapus geseran tengah sebelumnya */
+}
+
+body.dark-mode .footer::before {
+    border-top-color: #72536d;
+}
